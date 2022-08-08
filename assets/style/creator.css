@@ -1,0 +1,24 @@
+.charaform, .charasheet {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+    background-color: var(--box-color);
+    box-sizing: content-box;
+    height: 450px;
+    width: 500px;
+    padding: 20px;
+}
+
+.sidebar {
+    padding: 10px;
+    float: left;
+    border: 1px solid rgb(163, 163, 163);
+    background-color: #adadad;
+    width: 100px;
+    height: 100%;
+}
+
+.sidebar button {
+    background-color: transparent;
+    border-style: none;
+}
