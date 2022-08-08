@@ -21,6 +21,10 @@ main {
     padding-bottom: 125px;
 }
 
+a, button {
+    cursor: pointer;
+}
+
 header {
     width: 100%;
     display: flex;
