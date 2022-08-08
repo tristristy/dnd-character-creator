@@ -4,21 +4,41 @@
     justify-content: left;
     background-color: var(--box-color);
     box-sizing: content-box;
-    height: 450px;
+    height: auto;
     width: 500px;
     padding: 20px;
 }
 
+.charasheet button {
+    width: 500px;
+    padding: 20px;
+    background-color: #adadad;
+    border: #2b2936 1px solid;
+    font-family: 'Cinzel Decorative', cursive;
+    font-size: 24px;
+}
+
+.charasheet button:hover {
+    background-color: #cfcfcf;
+    color: #2b2936;
+}
+
 .sidebar {
-    padding: 10px;
     float: left;
     border: 1px solid rgb(163, 163, 163);
     background-color: #adadad;
-    width: 100px;
+    width: auto;
     height: 100%;
 }
 
 .sidebar button {
+    width: 150px;
+    padding: 10px;
     background-color: transparent;
     border-style: none;
+}
+
+.sidebar button:hover {
+    background-color: #cfcfcf;
+    color: #2b2936;
 }

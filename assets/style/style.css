@@ -100,7 +100,7 @@ header nav ul li {
     33.33%  { opacity: 1; }
     44.44%  { opacity: 0; }
     100% { opacity: 0; }
-  }
+}
 
 .about {
     display: flex;
