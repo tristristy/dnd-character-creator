@@ -1,4 +1,4 @@
-#login {
+.logsign {
     justify-content: left;
     background-color: var(--box-color);
     box-sizing: content-box;
@@ -7,41 +7,31 @@
     padding: 20px;
 }
 
-#login p {
-    line-height: 2;
+.logsign p {
+    line-height: 2.5;
 }
 
-#login h2 {
+.logsign h2 {
     text-align: center;
 }
 
-#signup {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: left;
-    background-color: var(--box-color);
-    box-sizing: content-box;
-    height: auto;
-    width: 400px;
-    padding: 20px;
-    display: none;
+.logsign input {
+    font-size: 16px;
+    height: 28px;
+    width: 100%;
 }
 
-#signup p {
-    line-height: 2;
-}
-
-#signup h2 {
-    text-align: center;
-}
-
-#login button, #signup button {
+.logsign button {
     font-size: 16px;
     background: transparent;
     border-style: none;
     text-decoration: underline;
 }
 
-#login button:hover, #signup button:hover {
+.logsign button:hover {
     color: rgb(62, 62, 152);
+}
+
+#signup {
+    display: none;
 }
