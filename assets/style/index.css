@@ -14,6 +14,15 @@
 
 .desc {
     height: 400px;
+    overflow: auto;
+}
+
+.fulldesc {
+    display: none;
+}
+
+.desctab button.active {
+    background-color: #ccc;
 }
 
 .altpic img { 
@@ -22,7 +31,6 @@
     animation-duration: 15s; 
     animation-iteration-count: infinite; 
     position:absolute; 
-
 }
 
 .altpic img:nth-child(1) { animation-delay: 0s; }

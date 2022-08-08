@@ -10,6 +10,7 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Fondamento&display=swap" rel="stylesheet">
     </head>
 
     <body>
@@ -25,23 +26,27 @@
         </header>
         <main>
             <section id="boxes">
-                <div class="login">
-                    <h2>Login/Signup</h2>
+                <div id="login">
+                    <h2>Login</h2>
                     <p>
                         Username: <input type="text"></br>
                         Password: <input type="password"></br>
-                        <input type="submit"> <a href="">No account? Create one!</a>
+                        <input type="submit"> <button onclick="openSign()">No account? Create one!</button>
                     </p>
+                </div>
+                <div id="signup">
+                    <h2>Signup</h2>
                     <p>
                         Email: <input type="email"></br>
                         Username: <input type="text"></br>
                         Password: <input type="password"></br>
                         Confirm Password: <input type="password"></br>
-                        <input type="submit"> <a href="">Have an account? Login!</a>
+                        <input type="submit"> <button onclick="openLog()">Have an account? Login!</button>
                     </p>
-                </div>
+                </div>                
             </section>
         </main>
         <footer>&copy; 2022</footer>
+        <script src="./assets/script/loginscript.js"></script>
     </body>
 </html>
