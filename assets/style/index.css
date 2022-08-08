@@ -1,0 +1,71 @@
+.altpic, .desc {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+    background-color: var(--box-color);
+    box-sizing: content-box;
+    width: 500px;
+    padding: 20px;
+}
+
+.altpic {
+    height: 450px;
+}
+
+.desc {
+    height: 400px;
+}
+
+.altpic img { 
+    opacity:0; 
+    animation-name: fade; 
+    animation-duration: 15s; 
+    animation-iteration-count: infinite; 
+    position:absolute; 
+
+}
+
+.altpic img:nth-child(1) { animation-delay: 0s; }
+.altpic img:nth-child(2) { animation-delay: 5s; }
+.altpic img:nth-child(3) { animation-delay: 10s; }
+
+@keyframes fade {
+    0%   { opacity: 0; }
+    11.11%   { opacity: 1; }
+    33.33%  { opacity: 1; }
+    44.44%  { opacity: 0; }
+    100% { opacity: 0; }
+}
+
+.tabs {
+    background-color: var(--box-color);
+    justify-content: center;
+    align-items: center;
+    width: 540px;
+    font-size: 0px;
+}
+
+.tabs button {
+    border: none;
+    border-right: #000 1px solid;
+    background-color: transparent;
+    font-size: 18px;
+    width: 107px;
+    padding: 5px;
+}
+
+.tabs button:hover {
+    background-color: #d7d7d7;
+    color: #1b1a2b;
+}
+
+.about {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+    background-color: var(--box-color);
+    box-sizing: content-box;
+    height: auto;
+    width: 70%;
+    padding: 30px;
+}
