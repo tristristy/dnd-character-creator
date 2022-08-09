@@ -21,6 +21,18 @@
     display: none;
 }
 
+.fulldesc p::first-letter {
+    top: 0;
+    font-family: 'Amita', cursive;
+    font-size: 40px;
+    float: left;
+    margin-right: 10px;
+    padding: 3px;
+    line-height: 1;
+    border: black 2px solid;
+    background-color: #d7d7d7;
+}
+
 .desctab button.active {
     background-color: #ccc;
 }
