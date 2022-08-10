@@ -21,6 +21,10 @@
     display: none;
 }
 
+.fulldesc p {
+    margin-bottom: 10px;
+}
+
 .fulldesc p::first-letter {
     top: 0;
     font-family: 'Amita', cursive;
