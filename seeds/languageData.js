@@ -49,6 +49,12 @@ const languageData = [
   {
     language_name: "Undercommon",
   },
+  {
+    language_name: "One of your choice",
+  },
+  {
+    language_name: "Two of your choice",
+  },
 ];
 
 const seedLanguage = () => Language.bulkcreate(languageData);

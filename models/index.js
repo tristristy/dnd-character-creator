@@ -1,16 +1,47 @@
 const User = require('./User');
-const Gallery = require('./Gallery');
-const Painting = require('./Painting');
-const Spell = require('./Spell')
+const Spell = require('./Spell');
+const Player = require('./Player');
+const Background = require('./Background');
+const SkillProf = require('./SkillProf');
+const Class = require('./Class');
+const Language = require('./Language');
+const Tool = require('./Tool')
 
-Gallery.hasMany(Painting, {
-  foreignKey: 'gallery_id',
+User.hasMany(Player, {
+  foreignKey: 'user_id'
 });
 
-
-
-Painting.belongsTo(Gallery, {
-  foreignKey: 'gallery_id',
+Player.belongsTo(User, {
+  foreignKey: "user_id"
 });
 
-module.exports = { User, Gallery, Painting };
+Player.hasOne(Race, {
+  foreignKey: "race_id"
+});
+
+Player.hasOne(Class, {
+  foreignKey: "class_id"
+})
+
+Class.hasMany(Spell, {
+  foreignKey: "class_id"
+})
+
+Background.hasMany(Language, {
+  foreignKey: "background_lang"
+});
+
+Background.hasMany(Tool, {
+  foreignKey: "background_tool"
+});
+
+Background.hasMany(SkillProf,{
+  foreignKey: "background_prof"
+});
+
+Race.hasMany(Language, {
+  foreignKey: "race_id"
+})
+
+
+module.exports = { User, Player, Race, Language, Tool, Spell, Class, Background};
