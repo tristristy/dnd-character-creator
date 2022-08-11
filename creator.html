@@ -30,36 +30,33 @@
         </header>
         <main>
             <section class="sidebar">
-                <button class="createchara">Create</button>
+                <div>
+                    <button class="createchara">Create</button>
+                </div>
+                <div>
+                    <h4 class="title">Saved Characters</h4>
+                    <button class="createchara newchara">New Character</button>
+                </div>
             </section>
             <section id="boxes">
                 <div class="charasheet">
+                    <button class="baseinfo">Basic Information</button>
                     <div class="dropdown">
-                        <button onclick="myFunction()" class="baseinfo dropbtn">Basic Information</button>
-                            <div id="infoDropdown" class="dropdown-content">
-                                <a href="#">Link 1</a>
-                                <a href="#">Link 2</a>
-                                <a href="#">Link 3</a>
-                        </div>
-                    </div>
-                    <div class="dropdown">
-                        <button onclick="myFunction()" class="levels dropbtn">Levels and Stats</button>
+                        <button class="levels dropbtn">Levels and Stats</button>
                             <div id="levelsDropdown" class="dropdown-content">
-                                <a href="#">Link 1</a>
-                                <a href="#">Link 2</a>
-                                <a href="#">Link 3</a>
+                                <a href="./info.html">Levels</a>
+                                <a href="./info.html">Stats</a>
                         </div>
                     </div>
                     <div class="dropdown">
-                        <button onclick="myFunction()" class="classes dropbtn">Class / Subclass</button>
+                        <button class="classes dropbtn">Class / Subclass</button>
                             <div id="classesDropdown" class="dropdown-content">
-                                <a href="#">Link 1</a>
-                                <a href="#">Link 2</a>
-                                <a href="#">Link 3</a>
+                                <a href="./info.html">Class</a>
+                                <a href="./info.html">Subclass</a>
                         </div>
                     </div>
                     <div class="dropdown">
-                        <button onclick="myFunction()" class="proficiencies dropbtn">Proficiencies</button>
+                        <button class="proficiencies dropbtn">Proficiencies</button>
                             <div id="profDropdown" class="dropdown-content">
                                 <a href="#">Link 1</a>
                                 <a href="#">Link 2</a>
@@ -67,7 +64,7 @@
                         </div>
                     </div>
                     <div class="dropdown">
-                        <button onclick="myFunction()" class="equip dropbtn">Equipment</button>
+                        <button class="equip dropbtn">Equipment</button>
                             <div id="equipDropdown" class="dropdown-content">
                                 <a href="#">Link 1</a>
                                 <a href="#">Link 2</a>
@@ -75,7 +72,7 @@
                         </div>
                     </div>
                     <div class="dropdown">
-                        <button onclick="myFunction()" class="spells dropbtn">Spell/Slots</button>
+                        <button class="spells dropbtn">Spell/Slots</button>
                             <div id="spellsDropdown" class="dropdown-content">
                                 <a href="#">Link 1</a>
                                 <a href="#">Link 2</a>
@@ -83,7 +80,7 @@
                         </div>
                     </div>
                     <div class="dropdown">
-                        <button onclick="myFunction()" class="miscinfo dropbtn">Misc Information</button>
+                        <button class="miscinfo dropbtn">Misc Information</button>
                             <div id="miscDropdown" class="dropdown-content">
                                 <a href="#">Link 1</a>
                                 <a href="#">Link 2</a>
@@ -91,13 +88,35 @@
                         </div>
                     </div>
                  </div>
-                <div class="charaform">
-                    Character Fillout Form
+                <div class="charaform mainform">
+                    <div class="infoForm hide inputform">
+                        <p>Fist Name: <input type="text"> </p>
+                        <p>Last Name: <input type="text"> </p>
+                    </div> 
+                    <div class="levelForm hide inputform">
+                        <p>Level: <input type="text"> </p>
+                    </div> 
+                    <div class="classForm hide inputform">
+                        <p>Class: <input type="text"> </p>
+                        <p>Subclass: <input type="text"> </p>
+                    </div> 
+                    <div class="profForm hide inputform">
+                        <p>Proficiencies: <input type="text"> </p>
+                    </div> 
+                    <div class="equipForm hide inputform">
+                        <p>Equipment: <input type="text"> </p>
+                    </div> 
+                    <div class="spellsForm hide inputform">
+                        <p>Spells: <input type="text"> </p>
+                    </div> 
+                    <div class="miscInfoForm hide inputform">
+                        <p>Misc Information: <input type="text"> </p>
+                    </div> 
                 </div>
             </section>
         </main>
         <footer>&copy; 2022</footer>
-        <script src="./views/creator.handlebars"></script>
+        <!-- <script src="./views/creator.handlebars"></script> -->
         <script src="./assets/script/creatorButtons.js"></script>
         <script src="./public/js/logout.js"></script>
     </body>

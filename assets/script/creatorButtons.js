@@ -5,22 +5,17 @@ const proficienciesEl = document.querySelector('.proficiencies');
 const equipEl = document.querySelector('.equip');
 const spellsEl = document.querySelector('.spells');
 const miscEl = document.querySelector('.miscinfo');
+const mainFormEl =document.querySelector('.charaform');
 
-function showBasicInfo(event) {
-    if (!event.target.matches('.dropbtn')) {
-        var dropdowns = document.getElementsByClassName("dropdown-content");
-        var i;
-        for (i = 0; i < dropdowns.length; i++) {
-          var openDropdown = dropdowns[i];
-          if (openDropdown.classList.contains('show')) {
-            openDropdown.classList.remove('show');
-          }
-        }
-      }
-    document.getElementById("infoDropdown").classList.toggle("show");
+basicInfoEl.onclick = () => {
+    // main form
+    var basicInfoForm = document.querySelector('.infoForm')
+    basicInfoForm.classList.remove('hide');
+    basicInfoForm.classList.toggle('show');
 }
 
-function showLevels(event) {
+levelsEl.onclick = event => {
+    //drop down
     if (!event.target.matches('.levels')) {
         var dropdowns = document.getElementsByClassName("dropdown-content");
         var i;
@@ -30,11 +25,18 @@ function showLevels(event) {
             openDropdown.classList.remove('show');
           }
         }
-      }
+    }
     document.getElementById("levelsDropdown").classList.toggle("show");
+
+    // main form
+    var levelsForm = document.querySelector('.levelForm')
+    levelsForm.classList.remove('hide');
+    levelsForm.classList.toggle('show');
 }
 
-function showClass(event) {
+
+classEl.onclick = event => {
+    // dropdown
     if (!event.target.matches('.dropbtn')) {
         var dropdowns = document.getElementsByClassName("dropdown-content");
         var i;
@@ -46,9 +48,15 @@ function showClass(event) {
         }
       }
     document.getElementById("classesDropdown").classList.toggle("show");
+
+    // main form
+    var classForm = document.querySelector('.classForm')
+    classForm.classList.remove('hide');
+    classForm.classList.toggle('show');
 }
 
-function showProficiencies(event) {
+proficienciesEl.onclick = event => {
+    // dropdown
     if (!event.target.matches('.dropbtn')) {
         var dropdowns = document.getElementsByClassName("dropdown-content");
         var i;
@@ -60,9 +68,15 @@ function showProficiencies(event) {
         }
       }
     document.getElementById("profDropdown").classList.toggle("show");
+
+    // main form
+    var profForm = document.querySelector('.profForm')
+    profForm.classList.remove('hide');
+    profForm.classList.toggle('show');
 }
 
-function showEquip(event) {
+equipEl.onclick = event => {
+    // dropdown
     if (!event.target.matches('.dropbtn')) {
         var dropdowns = document.getElementsByClassName("dropdown-content");
         var i;
@@ -74,9 +88,15 @@ function showEquip(event) {
         }
       }
     document.getElementById("equipDropdown").classList.toggle("show");
+
+    // main form
+    var equipForm = document.querySelector('.equipForm')
+    equipForm.classList.remove('hide');
+    equipForm.classList.toggle('show');
 }
 
-function showSpells(event) {
+spellsEl.onclick = event => {
+    //dropdown
     if (!event.target.matches('.dropbtn')) {
         var dropdowns = document.getElementsByClassName("dropdown-content");
         var i;
@@ -88,9 +108,15 @@ function showSpells(event) {
         }
       }
     document.getElementById("spellsDropdown").classList.toggle("show");
+
+    // main form
+    var spellsForm = document.querySelector('.spellsForm')
+    spellsForm.classList.remove('hide');
+    spellsForm.classList.toggle('show');
 }
 
-function showMisc(event) {
+miscEl.onclick = event => {
+    //dropdown
     if (!event.target.matches('.dropbtn')) {
         var dropdowns = document.getElementsByClassName("dropdown-content");
         var i;
@@ -102,13 +128,13 @@ function showMisc(event) {
         }
       }
     document.getElementById("miscDropdown").classList.toggle("show");
+
+    // main form
+    var miscForm = document.querySelector('.miscInfoForm')
+    miscForm.classList.remove('hide');
+    miscForm.classList.toggle('show');
 }
 
+function clearInfo() {
 
-basicInfoEl.addEventListener("click", showBasicInfo);
-levelsEl.addEventListener("click", showLevels);
-classEl.addEventListener("click", showClass);
-proficienciesEl.addEventListener("click", showProficiencies);
-equipEl.addEventListener("click", showEquip);
-spellsEl.addEventListener("click", showSpells);
-miscEl.addEventListener("click", showMisc);
+}

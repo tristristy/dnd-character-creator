@@ -23,6 +23,14 @@
     color: #2b2936;
 }
 
+.mainform {
+    display: block;
+}
+
+.inputform {
+    margin: 10px 0;
+}
+
 .sidebar {
     float: left;
     border: 1px solid rgb(163, 163, 163);
@@ -42,6 +50,12 @@
 .sidebar button:hover {
     background-color: #cfcfcf;
     color: #2b2936;
+}
+
+.title {
+    text-align: center;
+    text-decoration: underline;
+    margin-top: 20px;
 }
 
 /* The container <div> - needed to position the dropdown content */
@@ -73,3 +87,8 @@
   
   /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
   .show {display:block;}
+
+  .hide {display: none;}
+
+
+
