@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Player Creator</title>
+        <link rel="stylesheet" href="./assets/style/style.css"/>
+        <link rel="stylesheet" href="./assets/style/index.css"/>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Fondamento&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+        <header>
+            <h1>Character Creator</h1>
+            <nav>
+                <ul>
+                    <li><a href="./index.html">Home</a></li>
+                    <li><a href="./creator.html">Creator</a></li>
+                    <li><a href="./login.html">Login</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <section id="boxes">
+                <div class="altpic">
+                    <img class="slideshow" src="./assets/images/slideshow1.png" alt="orc picture"/>
+                    <img class="slideshow" src="./assets/images/slideshow2.png" alt="dwarf picture"/>
+                    <img class="slideshow" src="./assets/images/slideshow3.png" alt="drow picture"/>
+                    <img class="slideshow" src="./assets/images/slideshow4.png" alt="dragonborn picture"/>
+                </div>
+                <div class="basicdesc">
+                    <div class="desc">
+                        <div id="racedesc" class="fulldesc">
+                            <h2>Races</h2>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                        </div>
+                        <div id="classdesc" class="fulldesc">
+                            <h2>Classes</h2>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                        </div>
+                        <div id="subclassdesc" class="fulldesc">
+                            <h2>Subclasses</h2>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                        </div>
+                        <div id="statsdesc" class="fulldesc">
+                            <h2>Stats</h2>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                        </div>
+                        <div id="equipdesc" class="fulldesc">
+                            <h2>Equipment</h2>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                        </div>
+                    </div>
+                    <div class="tabs">
+                        <button class="desctab" onclick="openDesc(event, 'racedesc')" id="defaultOpen">Race</button>
+                        <button class="desctab" onclick="openDesc(event, 'classdesc')">Class</button>
+                        <button class="desctab" onclick="openDesc(event, 'subclassdesc')">Subclass</button>
+                        <button class="desctab" onclick="openDesc(event, 'statsdesc')">Stats</button>
+                        <button class="desctab" onclick="openDesc(event, 'equipdesc')">Equipment</button>
+                    </div>
+                </div>
+            </section>
+            <section id="boxes">
+                <div  class="about">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                </div>
+            </section>
+        </main>
+        <footer>&copy; 2022</footer>
+        <script src="./assets/script/indextabs.js"></script>
+        <script src="./public/js/logout.js"></script>
+    </body>
+</html>
