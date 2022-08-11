@@ -1,4 +1,5 @@
 const basicInfoEl = document.querySelector('.baseinfo');
+const raceEl = document.querySelector('.race');
 const levelsEl = document.querySelector('.levels');
 const classEl = document.querySelector('.classes');
 const proficienciesEl = document.querySelector('.proficiencies');
@@ -7,11 +8,38 @@ const spellsEl = document.querySelector('.spells');
 const miscEl = document.querySelector('.miscinfo');
 const mainFormEl =document.querySelector('.charaform');
 
-basicInfoEl.onclick = () => {
+basicInfoEl.onclick = (event) => {
+    //drop down
+    if (!event.target.matches('.baseinfo')) {
+        var dropdowns = document.getElementsByClassName("dropdown-content");
+        var i;
+        for (i = 0; i < dropdowns.length; i++) {
+          var openDropdown = dropdowns[i];
+          if (openDropdown.classList.contains('show')) {
+            openDropdown.classList.remove('show');
+          }
+        }
+    }
+    document.getElementById("baseInfoDropdown").classList.toggle("show");
     // main form
     var basicInfoForm = document.querySelector('.infoForm')
     basicInfoForm.classList.remove('hide');
     basicInfoForm.classList.toggle('show');
+}
+
+raceEl.onclick = event => {
+    //drop down
+    if (!event.target.matches('.race')) {
+        var dropdowns = document.getElementsByClassName("dropdown-content");
+        var i;
+        for (i = 0; i < dropdowns.length; i++) {
+          var openDropdown = dropdowns[i];
+          if (openDropdown.classList.contains('show')) {
+            openDropdown.classList.remove('show');
+          }
+        }
+    }
+    document.getElementById("raceDropdown").classList.toggle("show");
 }
 
 levelsEl.onclick = event => {
@@ -33,7 +61,6 @@ levelsEl.onclick = event => {
     levelsForm.classList.remove('hide');
     levelsForm.classList.toggle('show');
 }
-
 
 classEl.onclick = event => {
     // dropdown
@@ -88,6 +115,7 @@ equipEl.onclick = event => {
         }
       }
     document.getElementById("equipDropdown").classList.toggle("show");
+
 
     // main form
     var equipForm = document.querySelector('.equipForm')
