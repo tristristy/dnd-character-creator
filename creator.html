@@ -93,29 +93,34 @@
                         </div>
                     </div>
                  </div>
-                <div class="charaform mainform">
+                <form class="charaform mainform" action="/dnd.php">
                     <div class="infoForm inputform">
-                        <p>Fist Name: <input type="text"> </p>
-                        <p>Last Name: <input type="text"> </p>
+                        <p>Name: <input type="text"></p> 
                     </div> 
                     <div class="raceForm inputform">
-                        <p>Race: <input type="text"> </p>
+                        <p>Race: <input> </p>
+                        <datalist id="races"></datalist>
                     </div> 
                     <div class="levelForm inputform">
-                        <p>Level: <input type="text"> </p>
+                        <p>Level: <input type="number"> </p>
                     </div> 
                     <div class="classForm inputform">
-                        <p>Class: <input type="text"> </p>
-                        <p>Subclass: <input type="text"> </p>
+                        <p>Class: <input> </p>
+                        <datalist id="classes"></datalist>
+                        <p>Subclass: <input> </p>
+                        <datalist id="subclasses"></datalist>
                     </div> 
                     <div class="profForm inputform">
-                        <p>Proficiencies: <input type="text"> </p>
+                        <p>Proficiencies: <input> </p>
+                        <datalist id="proficiences"></datalist>
                     </div> 
                     <div class="equipForm inputform">
-                        <p>Equipment: <input type="text"> </p>
+                        <p>Equipment: <input> </p>
+                        <datalist id="tools"></datalist>
                     </div> 
                     <div class="spellsForm inputform">
-                        <p>Spells: <input type="text"> </p>
+                        <p>Spells: <input> </p>
+                        <datalist id="spells"></datalist>
                     </div> 
                     <div class="miscInfoForm inputform">
                         <p>Misc Information: <input type="text"> </p>
@@ -124,7 +129,7 @@
                     <div class="formbtn">
                         <button class="createchara">Create</button>
                         <button class="deletebtn">Clear All</button>
-                    </div>
+                    </form>
                 </div>
             </section>
         </main>
