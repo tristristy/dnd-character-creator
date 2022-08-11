@@ -7,8 +7,9 @@ const equipEl = document.querySelector('.equip');
 const spellsEl = document.querySelector('.spells');
 const miscEl = document.querySelector('.miscinfo');
 const mainFormEl =document.querySelector('.charaform');
+const deleteBtn =document.querySelector('.deletebtn');
 
-basicInfoEl.onclick = (event) => {
+basicInfoEl.onclick = event => {
     //drop down
     if (!event.target.matches('.baseinfo')) {
         var dropdowns = document.getElementsByClassName("dropdown-content");
@@ -163,6 +164,11 @@ miscEl.onclick = event => {
     miscForm.classList.toggle('show');
 }
 
-function clearInfo() {
-
+deleteBtn.onclick = () => {
+  var elements = document.getElementsByTagName("input");
+  for (var ii=0; ii < elements.length; ii++) {
+    if (elements[ii].type == "text") {
+      elements[ii].value = "";
+    }
+  }
 }
