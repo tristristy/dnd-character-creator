@@ -15,7 +15,7 @@ SkillProf.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
-    abilityScore_id: {
+    AS_id: {
       type: DataTypes.INTEGER,
       allowNull: false,
       references: {

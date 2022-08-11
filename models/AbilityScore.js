@@ -13,6 +13,14 @@ AbilityScore.init({
   AS_name: {
     type: DataTypes.STRING,
     allowNull: false
+  },
+  AS_Score: {
+    type: DataTypes.STRING,
+    allowNull: false,
+    defaultValue: "10",
+    validate: {
+      isNumeric: true
+    }
   }
 },
 {
