@@ -19,19 +19,7 @@
 -- Dumping data for table `dnd5_classes`
 --
 
-INSERT INTO `classe` (`class_id`, `class_name`) VALUES
-(1, 'barbarian'),
-(2, 'bard'),
-(3, 'cleric'),
-(4, 'druid'),
-(5, 'fighter'),
-(6, 'monk'),
-(7, 'paladin'),
-(8, 'ranger'),
-(9, 'rogue'),
-(10, 'sorcerer'),
-(11, 'warlock'),
-(12, 'wizard');
+
 
 -- --------------------------------------------------------
 

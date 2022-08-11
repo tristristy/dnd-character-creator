@@ -24,6 +24,10 @@ Race.init(
         key: "id",
       },
     },
+    race_asi:{
+      type: DataType.STRING,
+      allowNull: false
+    }
   },
   {
     sequelize,
