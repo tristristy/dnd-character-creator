@@ -1,7 +1,9 @@
-const basicInfoEl = document.querySelector('.baseinfo');
+// basic grabs
+const backgroundEl = document.querySelector('.background');
 const raceEl = document.querySelector('.race');
-const levelsEl = document.querySelector('.levels');
+const skillsEl = document.querySelector('.skills');
 const classEl = document.querySelector('.classes');
+const subclassEl = document.querySelector('.subclasses');
 const proficienciesEl = document.querySelector('.proficiencies');
 const equipEl = document.querySelector('.equip');
 const spellsEl = document.querySelector('.spells');
@@ -9,23 +11,19 @@ const miscEl = document.querySelector('.miscinfo');
 const mainFormEl =document.querySelector('.charaform');
 const deleteBtn =document.querySelector('.deletebtn');
 
-basicInfoEl.onclick = event => {
-    //drop down
-    if (!event.target.matches('.baseinfo')) {
-        var dropdowns = document.getElementsByClassName("dropdown-content");
-        var i;
-        for (i = 0; i < dropdowns.length; i++) {
-          var openDropdown = dropdowns[i];
-          if (openDropdown.classList.contains('show')) {
-            openDropdown.classList.remove('show');
-          }
+backgroundEl.onclick = event => {
+  //drop down
+  if (!event.target.matches('.background')) {
+      var dropdowns = document.getElementsByClassName("dropdown-content");
+      var i;
+      for (i = 0; i < dropdowns.length; i++) {
+        var openDropdown = dropdowns[i];
+        if (openDropdown.classList.contains('show')) {
+          openDropdown.classList.remove('show');
         }
-    }
-    document.getElementById("baseInfoDropdown").classList.toggle("show");
-    // main form
-    var basicInfoForm = document.querySelector('.infoForm')
-    basicInfoForm.classList.remove('hide');
-    basicInfoForm.classList.toggle('show');
+      }
+  }
+  document.getElementById("backgroundDropdown").classList.toggle("show");
 }
 
 raceEl.onclick = event => {
@@ -43,9 +41,9 @@ raceEl.onclick = event => {
     document.getElementById("raceDropdown").classList.toggle("show");
 }
 
-levelsEl.onclick = event => {
+skillsEl.onclick = event => {
     //drop down
-    if (!event.target.matches('.levels')) {
+    if (!event.target.matches('.skills')) {
         var dropdowns = document.getElementsByClassName("dropdown-content");
         var i;
         for (i = 0; i < dropdowns.length; i++) {
@@ -55,7 +53,7 @@ levelsEl.onclick = event => {
           }
         }
     }
-    document.getElementById("levelsDropdown").classList.toggle("show");
+    document.getElementById("skillsDropdown").classList.toggle("show");
 
     // main form
     var levelsForm = document.querySelector('.levelForm')
@@ -81,6 +79,28 @@ classEl.onclick = event => {
     var classForm = document.querySelector('.classForm')
     classForm.classList.remove('hide');
     classForm.classList.toggle('show');
+
+    const barbarianBtn = document.getElementById('barbarian');
+}
+
+subclassEl.onclick = event => {
+  // dropdown
+  if (!event.target.matches('.dropbtn')) {
+      var dropdowns = document.getElementsByClassName("dropdown-content");
+      var i;
+      for (i = 0; i < dropdowns.length; i++) {
+        var openDropdown = dropdowns[i];
+        if (openDropdown.classList.contains('show')) {
+          openDropdown.classList.remove('show');
+        }
+      }
+    }
+  document.getElementById("subclassesBARBDropdown").classList.toggle("show");
+
+  // main form
+  var classForm = document.querySelector('.classForm')
+  classForm.classList.remove('hide');
+  classForm.classList.toggle('show');
 }
 
 proficienciesEl.onclick = event => {

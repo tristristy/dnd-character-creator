@@ -1,9 +1,9 @@
 const { Model, DataTypes } = require("sequelize");
 const sequelize = require("../config/connection");
 
-class Tool extends Model {}
+class Tools extends Model {}
 
-Tool.init(
+Tools.init(
   {
     tool_id: {
       type: DataTypes.INTEGER,
@@ -15,6 +15,14 @@ Tool.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
+    tool_type: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    tool_description: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    }
   },
   {
     sequelize,
@@ -25,4 +33,4 @@ Tool.init(
   }
 );
 
-module.exports = Tool;
+module.exports = Tools;

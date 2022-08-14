@@ -5,7 +5,7 @@ const Background = require('./Background');
 const SkillProf = require('./SkillProf');
 const Class = require('./Class');
 const Language = require('./Language');
-const Tool = require('./Tool')
+const Tool = require('./Tools')
 
 User.hasMany(Player, {
   foreignKey: 'user_id'
