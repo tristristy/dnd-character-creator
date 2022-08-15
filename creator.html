@@ -105,42 +105,32 @@
                     <div class="dropdown">
                         <button class="proficiencies dropbtn">Proficiencies</button>
                             <div id="profDropdown" class="dropdown-content">
-                                <a>Strength</a>
-                                <a>Dexterity</a>
-                                <a>Constitution</a>
-                                <a>Intelligence</a>
-                                <a>Wisdom</a>
-                                <a>Charisma</a>
+                                <a id="strength">Strength</a>
+                                <a id="dexterity">Dexterity</a>
+                                <a id="constitution">Constitution</a>
+                                <a id="intelligence">Intelligence</a>
+                                <a id="wisdom">Wisdom</a>
+                                <a id="charisma">Charisma</a>
                         </div>
                     </div>
                     <div class="dropdown">
                         <button class="skills dropbtn">Skills</button>
                             <div id="skillsDropdown" class="dropdown-content">
-                                <a>Acrobatics</a>
-                                <a>Animal Handling</a>
-                                <a>Arcana</a>
-                                <a>Athletica</a>
-                                <a>Deception</a>
-                                <a>History</a>
-                                <a>Insight</a>
-                                <a>Intimidation</a>
-                                <a>Investigation</a>
-                                <a>Medicine</a>
-                                <a>Nature</a>
-                                <a>Perception</a>
-                                <a>Performance</a>
-                                <a>Persuasion</a>
-                                <a>Religion</a>
-                                <a>Slight of Hand</a>
-                                <a>Stealth</a>
-                                <a>Survival</a>
+                                <a id="skill"></a>
+                                <a id="skill2"></a>
+                                <a id="skill3"></a>
+                                <a id="skill4"></a>
+                                <a id="skill5"></a>
                             </div>
                     </div>
                     <div class="dropdown">
                         <button class="equip dropbtn">Equipment</button>
                             <div id="equipDropdown" class="dropdown-content">
-                                <a href="#">Your class and background determine your characters starting equipment, including weapons, armor, and other adventuring gear. Instead of taking the gear given to you by your class and background, you can purchase your starting equipment. You have a number of gold pieces (gp) to spend based on your class. Your Strength score limits the amount of gear you can carry. </a>
-                                <a href="./info.html" target="_blank">Learn More</a>
+                                <a id="tool"></a>
+                                <a id="tool2"></a>
+                                <a id="tool3"></a>
+                                <a id="tool4"></a>
+                                <a id="tool5"></a>
                         </div>
                     </div>
                     <div class="dropdown">
@@ -152,37 +142,33 @@
                     </div>
                  </div>
                 <form class="charaform mainform">
-                    <div class="infoForm inputform">
-                        <p>Name: <input type="text"></p> 
+                    <div class="inputform">
+                        <p>Name: <input id="player-name" type="text"></p> 
                     </div> 
-                    <div class="levelForm inputform">
-                        <p>Level (1-20): <input type="number"> </p>
+                    <div class="inputform">
+                        <p>Level (1-20): <input id="player-level" type="number"> </p>
                     </div> 
-                    <div class="backgroundForm inputform">
+                    <div class="inputform">
                         <p id="bg-input">Background:</p>
                     </div> 
-                    <div class="raceForm inputform">
+                    <div class="inputform">
                         <p id="race-input">Race:</p>
                     </div> 
-                    <div class="classForm inputform">
+                    <div class="inputform">
                         <p id="class-input">Class:</p>
                         <p id="subclass-input">Subclass:</p>
                     </div> 
-                    <div class="profForm inputform">
-                        <p>Proficiencies:</p>
-                        <datalist id="proficiences"></datalist>
+                    <div class="inputform">
+                        <p id="prof-input">Proficiencies:</p>
                     </div> 
-                    <div class="skillForm inputform">
-                        <p>Skills:</p>
-                        <datalist id="skills"></datalist>
+                    <div class="inputform">
+                        <p id="skills-input">Skills:</p>
                     </div> 
-                    <div class="equipForm inputform">
-                        <p>Equipment:</p>
-                        <datalist id="tools"></datalist>
+                    <div class="inputform">
+                        <p id="tools-input">Equipment:</p>
                     </div> 
-                    <div class="spellsForm inputform">
+                    <div class="inputform">
                         <p>Spells:</p>
-                        <datalist id="spells"></datalist>
                     </div> 
                     <!-- <div class="miscInfoForm inputform">
                         <p>Misc Information: <input type="text"> </p>

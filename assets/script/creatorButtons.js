@@ -9,6 +9,7 @@ const equipEl = document.querySelector('.equip');
 const spellsEl = document.querySelector('.spells');
 const mainFormEl =document.querySelector('.charaform');
 const deleteBtn =document.querySelector('.deletebtn');
+const createBtn = document.querySelector('.createchara');
 
 // background choices
 const bgInputEl = document.getElementById("bg-input");
@@ -61,6 +62,22 @@ const sorcererBtn = document.getElementById('sorcerer')
 const subclassInputEl = document.getElementById('subclass-input');
 const subclassDropdown = document.querySelector('.dropdown-content');
 
+// proficeincies
+const profInputEl = document.getElementById('prof-input');
+const strengthBtn = document.getElementById('strength');
+const dexterityBtn = document.getElementById('dexterity');
+const constitutionBtn = document.getElementById('constitution');
+const intelligenceBtn = document.getElementById('intelligence');
+const wisdomBtn = document.getElementById('wisdom');
+const charismaBtn = document.getElementById('charisma');
+
+// skills
+const skillsDropdown = document.querySelector('.dropdown-content');
+const skillsInputEl = document.getElementById('skills-input');
+
+// tools
+const toolsInputEl = document.getElementById('tools-input');
+
 backgroundEl.onclick = event => {
   //drop down
   if (!event.target.matches('.background')) {
@@ -76,25 +93,101 @@ backgroundEl.onclick = event => {
   document.getElementById("backgroundDropdown").classList.toggle("show");
 
   //choices for the sheet
-  acolyteBG.onclick = () => {bgInputEl.textContent = "Background: Acolyte"}
-  charlatanBG.onclick = () => {bgInputEl.textContent = "Background: Charlatan"}
-  spyBG.onclick = () => {bgInputEl.textContent = "Background: Spy"}
-  criminalBG.onclick = () => {bgInputEl.textContent = "Background: Criminal"}
-  entertainerBG.onclick = () => {bgInputEl.textContent = "Background: Entertainer"}
-  gladiatorBG.onclick = () => {bgInputEl.textContent = "Background: Gladiator"}
-  folkHeroBG.onclick = () => {bgInputEl.textContent = "Background: Folk Hero"}
-  guildArtisanBG.onclick = () => {bgInputEl.textContent = "Background: Guild Artisan"}
-  guildMerchantBG.onclick = () => {bgInputEl.textContent = "Background: Guild Merchant"}
-  hermitBG.onclick = () => {bgInputEl.textContent = "Background: Hermit"}
-  nobleBG.onclick = () => {bgInputEl.textContent = "Background: Noble"}
-  knightBG.onclick = () => {bgInputEl.textContent = "Background: Knight"}
-  retainersBG.onclick = () => {bgInputEl.textContent = "Background: Retainers"}
-  outlanderBG.onclick = () => {bgInputEl.textContent = "Background: Outlander"}
-  sageBG.onclick = () => {bgInputEl.textContent = "Background: Sage"}
-  sailorBG.onclick = () => {bgInputEl.textContent = "Background: Sailor"}
-  pirateBG.onclick = () => {bgInputEl.textContent = "Background: Pirate"}
-  soldierBG.onclick = () => {bgInputEl.textContent = "Background: Soldier"}
-  urchinBG.onclick = () => {bgInputEl.textContent = "Background: Urchin"}
+  acolyteBG.onclick = () => {
+    bgInputEl.textContent = "Background: Acolyte";
+    skillsInputEl.textContent = 'Skills: Athletics, Religion';
+    toolsInputEl.textContent = 'Equipment:';
+  }
+  charlatanBG.onclick = () => {
+    bgInputEl.textContent = "Background: Charlatan";
+    skillsInputEl.textContent = 'Skills: Deception, Slight of Hand';
+    toolsInputEl.textContent = 'Equipment: Forgery Kit, Disguise Kit';
+  }
+  spyBG.onclick = () => {
+    bgInputEl.textContent = "Background: Spy";
+    skillsInputEl.textContent = 'Skills: Deception, Stealth';
+    toolsInputEl.textContent = 'Equipment: Gaming Set, Thieves Tools';
+  }
+  criminalBG.onclick = () => {
+    bgInputEl.textContent = "Background: Criminal";
+    skillsInputEl.textContent = 'Skills: Deception, Stealth';
+    toolsInputEl.textContent = 'Equipment: Gaming Set, Thieves Tools';
+  }
+  entertainerBG.onclick = () => {
+    bgInputEl.textContent = "Background: Entertainer";
+    skillsInputEl.textContent = 'Skills: Acrobatics, Performance';
+    toolsInputEl.textContent = 'Equipment: Disguise Kit, Musical Instrument';
+  }
+  gladiatorBG.onclick = () => {
+    bgInputEl.textContent = "Background: Gladiator";
+    skillsInputEl.textContent = 'Skills: Acrobatics, Performance';
+    toolsInputEl.textContent = 'Equipment: Disguise Kit, Musical Instrument';
+  }
+  folkHeroBG.onclick = () => {
+    bgInputEl.textContent = "Background: Folk Hero";
+    skillsInputEl.textContent = 'Skills: Animal Handling, Survival';
+    toolsInputEl.textContent = 'Equipment: Artisans Tools, Land Vehicle';
+  }
+  guildArtisanBG.onclick = () => {
+    bgInputEl.textContent = "Background: Guild Artisan";
+    skillsInputEl.textContent = 'Skills: Insight, Persuasion';
+    toolsInputEl.textContent = 'Equipment: Artisans Tools';
+  }
+  guildMerchantBG.onclick = () => {
+    bgInputEl.textContent = "Background: Guild Merchant";
+    skillsInputEl.textContent = 'Skills: Insight, Persuasion';
+    toolsInputEl.textContent = 'Equipment: Artisans Tools';
+  }
+  hermitBG.onclick = () => {
+    bgInputEl.textContent = "Background: Hermit";
+    skillsInputEl.textContent = 'Skills: Medicine, Religion';
+    toolsInputEl.textContent = 'Equipment: Herbalism Kit';
+  }
+  nobleBG.onclick = () => {
+    bgInputEl.textContent = "Background: Noble";
+    skillsInputEl.textContent = 'Skills: History, Persuasion';
+    toolsInputEl.textContent = 'Equipment: Gaming Set';
+  }
+  knightBG.onclick = () => {
+    bgInputEl.textContent = "Background: Knight";
+    skillsInputEl.textContent = 'Skills: History, Persuasion';
+    toolsInputEl.textContent = 'Equipment: Gaming Set';
+  }
+  retainersBG.onclick = () => {
+    bgInputEl.textContent = "Background: Retainers";
+    skillsInputEl.textContent = 'Skills: History, Persuasion';
+    toolsInputEl.textContent = 'Equipment: Gaming Set';
+  }
+  outlanderBG.onclick = () => {
+    bgInputEl.textContent = "Background: Outlander";
+    skillsInputEl.textContent = 'Skills: Athletics, Survival';
+    toolsInputEl.textContent = 'Equipment: Musical Instrument';
+  }
+  sageBG.onclick = () => {
+    bgInputEl.textContent = "Background: Sage";
+    skillsInputEl.textContent = 'Skills: Arcana, History';
+    toolsInputEl.textContent = 'Equipment:';
+  }
+  sailorBG.onclick = () => {
+    bgInputEl.textContent = "Background: Sailor";
+    skillsInputEl.textContent = 'Skills: Athletics, Perception';
+    toolsInputEl.textContent = 'Equipment: Navigators Tools, Vechicles (Water)';
+  }
+  pirateBG.onclick = () => {
+    bgInputEl.textContent = "Background: Pirate";
+    skillsInputEl.textContent = 'Skills: Athletics, Perception';
+    toolsInputEl.textContent = 'Equipment: Navigators Tools, Vechicles (Water)';
+  }
+  soldierBG.onclick = () => {
+    bgInputEl.textContent = "Background: Soldier";
+    skillsInputEl.textContent = 'Skills: Athletics, Intimidation';
+    toolsInputEl.textContent = 'Equipment: Gaming Set, Vehicles (Land)';
+  }
+  urchinBG.onclick = () => {
+    bgInputEl.textContent = "Background: Urchin";
+    skillsInputEl.textContent = 'Skills: Slight of Hand, Survival';
+    toolsInputEl.textContent = 'Equipment: Disguise Kit, Thieves Tools';
+  }
 }
 
 raceEl.onclick = event => {
@@ -466,6 +559,163 @@ proficienciesEl.onclick = event => {
         }
       }
     document.getElementById("profDropdown").classList.toggle("show");
+
+    // dropdown choices
+    strengthBtn.onclick = () => {
+      // proficiency form
+      profInputEl.textContent = 'Proficiencies: Strength';
+
+      //skills drops
+      skillsDropdown.textContent = "";
+      var strengthSkill = document.getElementById('skill');
+      strengthSkill.textContent = 'Athletics';
+
+      //extras
+      var skill = document.getElementById('skill');
+      var skill2 = document.getElementById('skill2');
+      var skill3 = document.getElementById('skill3');
+      var skill4 = document.getElementById('skill4');
+      var skill5 = document.getElementById('skill5');
+      skill.textContent = "";
+      skill2.textContent = "";
+      skill3.textContent = "";
+      skill4.textContent = "";
+      skill5.textContent = "";
+
+      // clear out old skills
+      // skillsInputEl.textContent = "Skills:";
+
+      // skill form
+      strengthSkill.onclick = () => {skillsInputEl.textContent = 'Skills: Athletics'}
+    }
+    dexterityBtn.onclick = () => {
+      profInputEl.textContent = 'Proficiencies: Dexterity';
+
+      //skills drops
+      skillsDropdown.textContent = "";
+      var dexteritySkill = document.getElementById('skill');
+      dexteritySkill.textContent = 'Arobatics';
+      var dexteritySkill2 = document.getElementById('skill2');
+      dexteritySkill2.textContent = 'Slight of Hand';
+      var dexteritySkill3 = document.getElementById('skill3');
+      dexteritySkill3.textContent = 'Stealth';
+
+      // extras
+      var skill4 = document.getElementById('skill4');
+      var skill5 = document.getElementById('skill5');
+      skill4.textContent = "";
+      skill5.textContent = "";
+
+      // clear out old skills
+      // skillsInputEl.textContent = "Skills:";
+
+      // skill form
+      dexteritySkill.onclick = () => {skillsInputEl.textContent = 'Skills: Acrobatics'}
+      dexteritySkill2.onclick = () => {skillsInputEl.textContent = 'Skills: Slight of Hand'}
+      dexteritySkill3.onclick = () => {skillsInputEl.textContent = 'Skills: Stealth'}
+    }
+    constitutionBtn.onclick = () => {
+      // profieciency form
+      profInputEl.textContent = 'Proficiencies: Constitution';
+      
+      //skills drops
+      skillsDropdown.textContent = "";
+
+      //extras
+      var skill = document.getElementById('skill');
+      var skill2 = document.getElementById('skill2');
+      var skill3 = document.getElementById('skill3');
+      var skill4 = document.getElementById('skill4');
+      var skill5 = document.getElementById('skill5');
+      skill.textContent = "";
+      skill2.textContent = "";
+      skill3.textContent = "";
+      skill4.textContent = "";
+      skill5.textContent = "";
+
+      // clear out old skills
+      // skillsInputEl.textContent = "Skills: None";
+    }
+    intelligenceBtn.onclick = () => {
+      // proficiency form
+      profInputEl.textContent = 'Proficiencies: Intelligence';
+
+      //skills drops
+      skillsDropdown.textContent = "";
+      var intelSkill = document.getElementById('skill');
+      intelSkill.textContent = 'Arcana';
+      var intelSkill2 = document.getElementById('skill2');
+      intelSkill2.textContent = 'History';
+      var intelSkill3 = document.getElementById('skill3');
+      intelSkill3.textContent = 'Investigation';
+      var intelSkill4 = document.getElementById('skill4');
+      intelSkill4.textContent = 'Nature';
+      var intelSkill5 = document.getElementById('skill5');
+      intelSkill5.textContent = 'Religion';
+
+      // clear out old skills
+      // skillsInputEl.textContent = "Skills:";
+
+      // skill form
+      intelSkill.onclick = () => {skillsInputEl.textContent = 'Skills: Arcana'}
+      intelSkill2.onclick = () => {skillsInputEl.textContent = 'Skills: History'}
+      intelSkill3.onclick = () => {skillsInputEl.textContent = 'Skills: Investigation'}
+      intelSkill4.onclick = () => {skillsInputEl.textContent = 'Skills: Nature'}
+      intelSkill5.onclick = () => {skillsInputEl.textContent = 'Skills: Religion'}
+    }
+    wisdomBtn.onclick = () => {
+      profInputEl.textContent = 'Proficiencies: Wisdom';
+      
+      //skills drops
+      skillsDropdown.textContent = "";
+      var wisdomSkill = document.getElementById('skill');
+      wisdomSkill.textContent = 'Animal Handling';
+      var wisdomSkill2 = document.getElementById('skill2');
+      wisdomSkill2.textContent = 'Insight';
+      var wisdomSkill3 = document.getElementById('skill3');
+      wisdomSkill3.textContent = 'Medicine';
+      var wisdomSkill4 = document.getElementById('skill4');
+      wisdomSkill4.textContent = 'Perception';
+      var wisdomSkill5 = document.getElementById('skill5');
+      wisdomSkill5.textContent = 'Survival';
+
+      // clear out old skills
+      // skillsInputEl.textContent = "Skills:";
+
+      // skill form
+      wisdomSkill.onclick = () => {skillsInputEl.textContent = 'Skills: Animal Handling'}
+      wisdomSkill2.onclick = () => {skillsInputEl.textContent = 'Skills: Insight'}
+      wisdomSkill3.onclick = () => {skillsInputEl.textContent = 'Skills: Medicine'}
+      wisdomSkill4.onclick = () => {skillsInputEl.textContent = 'Skills: Perception'}
+      wisdomSkill5.onclick = () => {skillsInputEl.textContent = 'Skills: Survival'}
+    }
+    charismaBtn.onclick = () => {
+      profInputEl.textContent = 'Proficiencies: Charisma';
+
+      //skills drops
+      skillsDropdown.textContent = "";
+      var charismaSkill = document.getElementById('skill');
+      charismaSkill.textContent = 'Deception';
+      var charismaSkill2 = document.getElementById('skill');
+      charismaSkill2.textContent = 'Intimidation';
+      var charismaSkill3 = document.getElementById('skill');
+      charismaSkill3.textContent = 'Performance';
+      var charismaSkill4 = document.getElementById('skill');
+      charismaSkill4.textContent = 'Persuasion';
+
+      //extras
+      var skill5 = document.getElementById('skill5');
+      skill5.textContent = "";
+
+      // clear out old skills
+      // skillsInputEl.textContent = "Skills:";
+
+      // skill form
+      charismaSkill.onclick = () => {skillsInputEl.textContent = 'Skills: Deception'}
+      charismaSkill2.onclick = () => {skillsInputEl.textContent = 'Skills: Intimidation'}
+      charismaSkill3.onclick = () => {skillsInputEl.textContent = 'Skills: Performance'}
+      charismaSkill4.onclick = () => {skillsInputEl.textContent = 'Skills: Persuasion'}
+    }
 }
 
 skillsEl.onclick = event => {
@@ -481,11 +731,6 @@ skillsEl.onclick = event => {
       }
   }
   document.getElementById("skillsDropdown").classList.toggle("show");
-
-  // main form
-  var levelsForm = document.querySelector('.levelForm')
-  levelsForm.classList.remove('hide');
-  levelsForm.classList.toggle('show');
 }
 
 equipEl.onclick = event => {
@@ -501,12 +746,6 @@ equipEl.onclick = event => {
         }
       }
     document.getElementById("equipDropdown").classList.toggle("show");
-
-
-    // main form
-    var equipForm = document.querySelector('.equipForm')
-    equipForm.classList.remove('hide');
-    equipForm.classList.toggle('show');
 }
 
 spellsEl.onclick = event => {
@@ -522,11 +761,6 @@ spellsEl.onclick = event => {
         }
       }
     document.getElementById("spellsDropdown").classList.toggle("show");
-
-    // main form
-    var spellsForm = document.querySelector('.spellsForm')
-    spellsForm.classList.remove('hide');
-    spellsForm.classList.toggle('show');
 }
 
 // miscEl.onclick = event => {
@@ -549,7 +783,9 @@ spellsEl.onclick = event => {
 //     miscForm.classList.toggle('show');
 // }
 
-deleteBtn.onclick = () => {
+// delete button
+deleteBtn.onclick = (event) => {
+  event.preventDefault();
   var elements = document.getElementsByTagName("input");
   for (var ii=0; ii < elements.length; ii++) {
     if (elements[ii].type == "text") {
@@ -557,3 +793,52 @@ deleteBtn.onclick = () => {
     }
   }
 }
+
+// create button
+createBtn.onclick = (event) => {
+  event.preventDefault();
+  // player name 
+  var playerName = document.getElementById('player-name').value;
+  console.log(playerName);
+
+  // player level
+  var playerLevel = document.getElementById('player-level').value;
+  console.log(playerLevel);
+
+  // player background
+  var playerBackgroundEl = document.getElementById('bg-input').textContent.split(' ');
+  var playerBackground = playerBackgroundEl[1];
+  console.log(playerBackground);
+
+  // player race 
+  var playerRaceEl = document.getElementById('race-input').textContent.split(' ');
+  var playerRace = playerRaceEl[1];
+  console.log(playerRace);
+
+  // player class 
+  var playerClassEl = document.getElementById('class-input').textContent.split(' ');
+  var playerClass = playerClassEl[1];
+  console.log(playerClass);
+
+  // player subclass 
+  var playerSubclassEl = document.getElementById('subclass-input').textContent.split(': ');
+  var playerSubclass = playerSubclassEl[1];
+  console.log(playerSubclass);
+
+  // player proficiencies 
+  var playerProfEl = document.getElementById('prof-input').textContent.split(' ');
+  var playerProf = playerProfEl[1];
+  console.log(playerProf);
+
+  // player proficiencies 
+  var playerSkillsEl = document.getElementById('skills-input').textContent.split(': ');
+  var playerSkills = playerSkillsEl[1];
+  console.log(playerSkills);
+
+  // player tools
+  var playerToolsEl = document.getElementById('tools-input').textContent.split(': ');
+  var playerTools = playerToolsEl[1];
+  console.log(playerTools);
+
+  // player spells
+};
