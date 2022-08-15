@@ -74,9 +74,37 @@ const charismaBtn = document.getElementById('charisma');
 // skills
 const skillsDropdown = document.querySelector('.dropdown-content');
 const skillsInputEl = document.getElementById('skills-input');
+const acroBtn = document.getElementById('acrobatics');
+const animalBtn = document.getElementById('animal-handling');
+const arcanaBtn = document.getElementById('arcana');
+const athleticsBtn = document.getElementById('athletics');
+const deceptionBtn = document.getElementById('deception');
+const historyBtn = document.getElementById('history');
+const insightBtn = document.getElementById('insight');
+const intimidationBtn = document.getElementById('intimidation');
+const investigationBtn = document.getElementById('investigation');
+const medicineBtn = document.getElementById('medicine');
+const natureBtn = document.getElementById('nature');
+const perceptionBtn = document.getElementById('perception');
+const performanceBtn = document.getElementById('performance');
+const persuasionBtn = document.getElementById('persuasion');
+const religionBtn = document.getElementById('religion');
+const slightBtn = document.getElementById('slight');
+const stealthBtn = document.getElementById('stealth');
+const survivalBtn = document.getElementById('survival');
 
 // tools
 const toolsInputEl = document.getElementById('tools-input');
+const artToolsBtn = document.getElementById('artisans-tools');
+const gamingSetBtn = document.getElementById('gaming-sets');
+const musicalInstrumentBtn = document.getElementById('musical-instrument');
+const navToolsBtn = document.getElementById('navigators-tools');
+const thievesToolsBtn = document.getElementById('thieves-tools');
+const forgeryKitBtn = document.getElementById('forgery-kit');
+const disguiseKitBtn = document.getElementById('disguise-kit');
+const herbalismKitBtn = document.getElementById('herbalism-kit');
+const landVehicleBtn = document.getElementById('land-vehicle');
+const waterVehicleBtn = document.getElementById('water-vehicle');
 
 backgroundEl.onclick = event => {
   //drop down
@@ -560,162 +588,13 @@ proficienciesEl.onclick = event => {
       }
     document.getElementById("profDropdown").classList.toggle("show");
 
-    // dropdown choices
-    strengthBtn.onclick = () => {
-      // proficiency form
-      profInputEl.textContent = 'Proficiencies: Strength';
-
-      //skills drops
-      skillsDropdown.textContent = "";
-      var strengthSkill = document.getElementById('skill');
-      strengthSkill.textContent = 'Athletics';
-
-      //extras
-      var skill = document.getElementById('skill');
-      var skill2 = document.getElementById('skill2');
-      var skill3 = document.getElementById('skill3');
-      var skill4 = document.getElementById('skill4');
-      var skill5 = document.getElementById('skill5');
-      skill.textContent = "";
-      skill2.textContent = "";
-      skill3.textContent = "";
-      skill4.textContent = "";
-      skill5.textContent = "";
-
-      // clear out old skills
-      // skillsInputEl.textContent = "Skills:";
-
-      // skill form
-      strengthSkill.onclick = () => {skillsInputEl.textContent = 'Skills: Athletics'}
-    }
-    dexterityBtn.onclick = () => {
-      profInputEl.textContent = 'Proficiencies: Dexterity';
-
-      //skills drops
-      skillsDropdown.textContent = "";
-      var dexteritySkill = document.getElementById('skill');
-      dexteritySkill.textContent = 'Arobatics';
-      var dexteritySkill2 = document.getElementById('skill2');
-      dexteritySkill2.textContent = 'Slight of Hand';
-      var dexteritySkill3 = document.getElementById('skill3');
-      dexteritySkill3.textContent = 'Stealth';
-
-      // extras
-      var skill4 = document.getElementById('skill4');
-      var skill5 = document.getElementById('skill5');
-      skill4.textContent = "";
-      skill5.textContent = "";
-
-      // clear out old skills
-      // skillsInputEl.textContent = "Skills:";
-
-      // skill form
-      dexteritySkill.onclick = () => {skillsInputEl.textContent = 'Skills: Acrobatics'}
-      dexteritySkill2.onclick = () => {skillsInputEl.textContent = 'Skills: Slight of Hand'}
-      dexteritySkill3.onclick = () => {skillsInputEl.textContent = 'Skills: Stealth'}
-    }
-    constitutionBtn.onclick = () => {
-      // profieciency form
-      profInputEl.textContent = 'Proficiencies: Constitution';
-      
-      //skills drops
-      skillsDropdown.textContent = "";
-
-      //extras
-      var skill = document.getElementById('skill');
-      var skill2 = document.getElementById('skill2');
-      var skill3 = document.getElementById('skill3');
-      var skill4 = document.getElementById('skill4');
-      var skill5 = document.getElementById('skill5');
-      skill.textContent = "";
-      skill2.textContent = "";
-      skill3.textContent = "";
-      skill4.textContent = "";
-      skill5.textContent = "";
-
-      // clear out old skills
-      // skillsInputEl.textContent = "Skills: None";
-    }
-    intelligenceBtn.onclick = () => {
-      // proficiency form
-      profInputEl.textContent = 'Proficiencies: Intelligence';
-
-      //skills drops
-      skillsDropdown.textContent = "";
-      var intelSkill = document.getElementById('skill');
-      intelSkill.textContent = 'Arcana';
-      var intelSkill2 = document.getElementById('skill2');
-      intelSkill2.textContent = 'History';
-      var intelSkill3 = document.getElementById('skill3');
-      intelSkill3.textContent = 'Investigation';
-      var intelSkill4 = document.getElementById('skill4');
-      intelSkill4.textContent = 'Nature';
-      var intelSkill5 = document.getElementById('skill5');
-      intelSkill5.textContent = 'Religion';
-
-      // clear out old skills
-      // skillsInputEl.textContent = "Skills:";
-
-      // skill form
-      intelSkill.onclick = () => {skillsInputEl.textContent = 'Skills: Arcana'}
-      intelSkill2.onclick = () => {skillsInputEl.textContent = 'Skills: History'}
-      intelSkill3.onclick = () => {skillsInputEl.textContent = 'Skills: Investigation'}
-      intelSkill4.onclick = () => {skillsInputEl.textContent = 'Skills: Nature'}
-      intelSkill5.onclick = () => {skillsInputEl.textContent = 'Skills: Religion'}
-    }
-    wisdomBtn.onclick = () => {
-      profInputEl.textContent = 'Proficiencies: Wisdom';
-      
-      //skills drops
-      skillsDropdown.textContent = "";
-      var wisdomSkill = document.getElementById('skill');
-      wisdomSkill.textContent = 'Animal Handling';
-      var wisdomSkill2 = document.getElementById('skill2');
-      wisdomSkill2.textContent = 'Insight';
-      var wisdomSkill3 = document.getElementById('skill3');
-      wisdomSkill3.textContent = 'Medicine';
-      var wisdomSkill4 = document.getElementById('skill4');
-      wisdomSkill4.textContent = 'Perception';
-      var wisdomSkill5 = document.getElementById('skill5');
-      wisdomSkill5.textContent = 'Survival';
-
-      // clear out old skills
-      // skillsInputEl.textContent = "Skills:";
-
-      // skill form
-      wisdomSkill.onclick = () => {skillsInputEl.textContent = 'Skills: Animal Handling'}
-      wisdomSkill2.onclick = () => {skillsInputEl.textContent = 'Skills: Insight'}
-      wisdomSkill3.onclick = () => {skillsInputEl.textContent = 'Skills: Medicine'}
-      wisdomSkill4.onclick = () => {skillsInputEl.textContent = 'Skills: Perception'}
-      wisdomSkill5.onclick = () => {skillsInputEl.textContent = 'Skills: Survival'}
-    }
-    charismaBtn.onclick = () => {
-      profInputEl.textContent = 'Proficiencies: Charisma';
-
-      //skills drops
-      skillsDropdown.textContent = "";
-      var charismaSkill = document.getElementById('skill');
-      charismaSkill.textContent = 'Deception';
-      var charismaSkill2 = document.getElementById('skill');
-      charismaSkill2.textContent = 'Intimidation';
-      var charismaSkill3 = document.getElementById('skill');
-      charismaSkill3.textContent = 'Performance';
-      var charismaSkill4 = document.getElementById('skill');
-      charismaSkill4.textContent = 'Persuasion';
-
-      //extras
-      var skill5 = document.getElementById('skill5');
-      skill5.textContent = "";
-
-      // clear out old skills
-      // skillsInputEl.textContent = "Skills:";
-
-      // skill form
-      charismaSkill.onclick = () => {skillsInputEl.textContent = 'Skills: Deception'}
-      charismaSkill2.onclick = () => {skillsInputEl.textContent = 'Skills: Intimidation'}
-      charismaSkill3.onclick = () => {skillsInputEl.textContent = 'Skills: Performance'}
-      charismaSkill4.onclick = () => {skillsInputEl.textContent = 'Skills: Persuasion'}
-    }
+    // profs form
+    strengthBtn.onclick = () => {profInputEl.textContent = 'Proficiencies: Strength'}
+    dexterityBtn.onclick = () => {profInputEl.textContent = 'Proficiencies: Dexterity'}
+    constitutionBtn.onclick = () => {profInputEl.textContent = 'Proficiencies: Constitution'}
+    intelligenceBtn.onclick = () => {profInputEl.textContent = 'Proficiencies: Intelligence'}
+    wisdomBtn.onclick = () => {profInputEl.textContent = 'Proficiencies: Wisdom'}
+    charismaBtn.onclick = () => {profInputEl.textContent = 'Proficiencies: Charisma'}
 }
 
 skillsEl.onclick = event => {
@@ -731,6 +610,24 @@ skillsEl.onclick = event => {
       }
   }
   document.getElementById("skillsDropdown").classList.toggle("show");
+
+  acroBtn.onclick = () => {skillsInputEl.append(', Acrobatics')}
+  animalBtn.onclick = () => {skillsInputEl.append(', Animal Handling')}
+  arcanaBtn.onclick = () => {skillsInputEl.append(', Arcana')}
+  athleticsBtn.onclick = () => {skillsInputEl.append(', Athletics')}
+  deceptionBtn.onclick = () => {skillsInputEl.append(', Deception')}
+  historyBtn.onclick = () => {skillsInputEl.append(', History')}
+  insightBtn.onclick = () => {skillsInputEl.append(', Insight')}
+  intimidationBtn.onclick = () => {skillsInputEl.append(', Intimidation')}
+  medicineBtn.onclick = () => {skillsInputEl.append(', Medicine')}
+  natureBtn.onclick = () => {skillsInputEl.append(', Nature')}
+  perceptionBtn.onclick = () => {skillsInputEl.append(', Perception')}
+  performanceBtn.onclick = () => {skillsInputEl.append(', Performance')}
+  persuasionBtn.onclick = () => {skillsInputEl.append(', Persuasion')}
+  religionBtn.onclick = () => {skillsInputEl.append(', Religion')}
+  slightBtn.onclick = () => {skillsInputEl.append(', Slight of Hand')}
+  stealthBtn.onclick = () => {skillsInputEl.append(', Stealth')}
+  survivalBtn.onclick = () => {skillsInputEl.append(', Survival')}
 }
 
 equipEl.onclick = event => {
@@ -746,22 +643,33 @@ equipEl.onclick = event => {
         }
       }
     document.getElementById("equipDropdown").classList.toggle("show");
+
+    artToolsBtn.onclick = () => {toolsInputEl.append(', Artisans Tools')}
+    gamingSetBtn.onclick = () => {toolsInputEl.append(', Gaming Sets')}
+    musicalInstrumentBtn.onclick = () => {toolsInputEl.append(', Musical Instruments')}
+    navToolsBtn.onclick = () => {toolsInputEl.append(', Navigators Tools')}
+    thievesToolsBtn.onclick = () => {toolsInputEl.append(', Thieves Tools')}
+    forgeryKitBtn.onclick = () => {toolsInputEl.append(', Forgery Kit')}
+    disguiseKitBtn.onclick = () => {toolsInputEl.append(', Disguise Kit')}
+    herbalismKitBtn.onclick = () => {toolsInputEl.append(', Herbalism Kit')}
+    landVehicleBtn.onclick = () => {toolsInputEl.append(', Land Vehicle')}
+    waterVehicleBtn.onclick = () => {toolsInputEl.append(', Water Vehicle')}
 }
 
-spellsEl.onclick = event => {
-    //dropdown
-    if (!event.target.matches('.dropbtn')) {
-        var dropdowns = document.getElementsByClassName("dropdown-content");
-        var i;
-        for (i = 0; i < dropdowns.length; i++) {
-          var openDropdown = dropdowns[i];
-          if (openDropdown.classList.contains('show')) {
-            openDropdown.classList.remove('show');
-          }
-        }
-      }
-    document.getElementById("spellsDropdown").classList.toggle("show");
-}
+// spellsEl.onclick = event => {
+//     //dropdown
+//     if (!event.target.matches('.dropbtn')) {
+//         var dropdowns = document.getElementsByClassName("dropdown-content");
+//         var i;
+//         for (i = 0; i < dropdowns.length; i++) {
+//           var openDropdown = dropdowns[i];
+//           if (openDropdown.classList.contains('show')) {
+//             openDropdown.classList.remove('show');
+//           }
+//         }
+//       }
+//     document.getElementById("spellsDropdown").classList.toggle("show");
+// }
 
 // miscEl.onclick = event => {
 //     //dropdown
@@ -784,8 +692,7 @@ spellsEl.onclick = event => {
 // }
 
 // delete button
-deleteBtn.onclick = (event) => {
-  event.preventDefault();
+deleteBtn.onclick = () => {
   var elements = document.getElementsByTagName("input");
   for (var ii=0; ii < elements.length; ii++) {
     if (elements[ii].type == "text") {
@@ -839,6 +746,4 @@ createBtn.onclick = (event) => {
   var playerToolsEl = document.getElementById('tools-input').textContent.split(': ');
   var playerTools = playerToolsEl[1];
   console.log(playerTools);
-
-  // player spells
 };
