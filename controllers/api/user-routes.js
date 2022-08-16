@@ -3,7 +3,9 @@ const { User } = require('../../models');
 
 //Get all users
 router.get('/', (req, res) => {
-  User.findAll()
+  User.findAll({
+    attributes: {exclude: ['password']}
+  })
   .then(dbUserData => res.json(dbUserData))
   .catch(err => {
     console.log(err);
@@ -11,9 +13,10 @@ router.get('/', (req, res) => {
   });
 });
 
-//Get one user 
+//Get a single user 
 route.get('/:id', (req, res) => {
   User.findOne({
+    attributes: {exclude: ['password']},
     where: {
       id: req.params.id
     }
@@ -32,7 +35,7 @@ route.get('/:id', (req, res) => {
 });
 
 // CREATE new user
-router.post('/', async (req, res) => {
+router.post('/', (req, res) => {
   try {
     const dbUserData = await User.create({
       username: req.body.username,
