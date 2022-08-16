@@ -1,3 +1,4 @@
+const { Background } = require('../../models');
 // basic grabs
 const backgroundEl = document.querySelector('.background');
 const raceEl = document.querySelector('.race');
@@ -119,6 +120,8 @@ backgroundEl.onclick = event => {
       }
   }
   document.getElementById("backgroundDropdown").classList.toggle("show");
+
+  console.log({Background});
 
   //choices for the sheet
   acolyteBG.onclick = () => {
@@ -655,41 +658,6 @@ equipEl.onclick = event => {
     landVehicleBtn.onclick = () => {toolsInputEl.append(', Land Vehicle')}
     waterVehicleBtn.onclick = () => {toolsInputEl.append(', Water Vehicle')}
 }
-
-// spellsEl.onclick = event => {
-//     //dropdown
-//     if (!event.target.matches('.dropbtn')) {
-//         var dropdowns = document.getElementsByClassName("dropdown-content");
-//         var i;
-//         for (i = 0; i < dropdowns.length; i++) {
-//           var openDropdown = dropdowns[i];
-//           if (openDropdown.classList.contains('show')) {
-//             openDropdown.classList.remove('show');
-//           }
-//         }
-//       }
-//     document.getElementById("spellsDropdown").classList.toggle("show");
-// }
-
-// miscEl.onclick = event => {
-//     //dropdown
-//     if (!event.target.matches('.dropbtn')) {
-//         var dropdowns = document.getElementsByClassName("dropdown-content");
-//         var i;
-//         for (i = 0; i < dropdowns.length; i++) {
-//           var openDropdown = dropdowns[i];
-//           if (openDropdown.classList.contains('show')) {
-//             openDropdown.classList.remove('show');
-//           }
-//         }
-//       }
-//     document.getElementById("miscDropdown").classList.toggle("show");
-
-//     // main form
-//     var miscForm = document.querySelector('.miscInfoForm')
-//     miscForm.classList.remove('hide');
-//     miscForm.classList.toggle('show');
-// }
 
 // delete button
 deleteBtn.onclick = () => {

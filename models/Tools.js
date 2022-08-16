@@ -15,14 +15,6 @@ Tools.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
-    tool_type: {
-      type: DataTypes.STRING,
-      allowNull: false,
-    },
-    tool_description: {
-      type: DataTypes.STRING,
-      allowNull: false,
-    }
   },
   {
     sequelize,

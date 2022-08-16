@@ -30,6 +30,10 @@ Player.init (
             primaryKey: true,
             autoIncrement: true,
         },
+        user_name: {
+            type: DataTypes.STRING,
+            allowNull: false
+        },
         level: {
             type: DataTypes.INTEGER,
             allowNull: false
