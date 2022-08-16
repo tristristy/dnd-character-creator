@@ -11,7 +11,7 @@ router.get('/', (req, res) => {
     console.log(err);
     res.status(500).json(err);
   });
-});
+}); 
 
 //Get a single user 
 route.get('/:id', (req, res) => {
@@ -88,6 +88,27 @@ router.post('/login', async (req, res) => {
     console.log(err);
     res.status(400).json(err);
   }
+});
+
+// Update existing user
+router.put('/:id', (req, res) => {
+  User.update(req.body, {
+    individualHooks: true,
+    where: {
+      id: req.params.id
+    }
+  })
+  .then(dbUserData => {
+    if(!dbUserData[0]) {
+      res.status(404).json({ message: 'No user found with this id' });
+      return;
+    }
+    res.json(dbUserData);
+  })
+  .catch(err => {
+    console.log(err);
+    res.status(500).json(err);
+  });
 });
 
 // Logout
