@@ -2,6 +2,7 @@ const { Model, DataTypes } = require('sequelize');
 const bcrypt = require('bcrypt');
 const sequelize = require('../config/connection');
 const { update } = require('lodash');
+const { Sequelize } = require('../config/connection');
 
 class User extends Model {
   checkPassword(loginPw) {
@@ -36,6 +37,14 @@ User.init(
         len: [6],
       },
     },
+    createdAt: {
+      allowNull: false,
+      type: Sequelize.DATE
+    },
+    updatedAt: {
+      allowNull: false,
+      type: Sequelize.DATE
+    }
   },
   {
     hooks: {
