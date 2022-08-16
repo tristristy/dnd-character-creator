@@ -1,4 +1,4 @@
-const { Background } = require('../../models');
+import fs from 'fs';
 // basic grabs
 const backgroundEl = document.querySelector('.background');
 const raceEl = document.querySelector('.race');
@@ -120,8 +120,6 @@ backgroundEl.onclick = event => {
       }
   }
   document.getElementById("backgroundDropdown").classList.toggle("show");
-
-  console.log({Background});
 
   //choices for the sheet
   acolyteBG.onclick = () => {
@@ -715,3 +713,18 @@ createBtn.onclick = (event) => {
   var playerTools = playerToolsEl[1];
   console.log(playerTools);
 };
+
+function renderPost (results) {
+  const templateStr = fs.readFileSync('../../models').toString('utf8')
+  const template = Handlebars.compile(templateStr, { noEscape: true })
+  const view = Object.assign({
+   date: new Date().toISOString(),
+   versionSlug: slugify(results.version)
+  }, results)
+ 
+  return Object.assign({
+   content: template(view)
+  }, results)
+ }
+
+ renderPost();
