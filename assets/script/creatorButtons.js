@@ -1,4 +1,3 @@
-import fs from 'fs';
 // basic grabs
 const backgroundEl = document.querySelector('.background');
 const raceEl = document.querySelector('.race');
@@ -47,6 +46,7 @@ const humanBtn = document.getElementById('human')
 const tieflingBtn = document.getElementById('tiefling')
 
 // class choices
+const classDropdown = document.querySelector('#classesDropdown');
 const classInputEl = document.getElementById('class-input')
 const barbarianBtn = document.getElementById('barbarian')
 const bardBtn = document.getElementById('bard')
@@ -108,6 +108,7 @@ const landVehicleBtn = document.getElementById('land-vehicle');
 const waterVehicleBtn = document.getElementById('water-vehicle');
 
 backgroundEl.onclick = event => {
+
   //drop down
   if (!event.target.matches('.background')) {
       var dropdowns = document.getElementsByClassName("dropdown-content");
@@ -263,6 +264,8 @@ classEl.onclick = event => {
     barbarianBtn.onclick = () => {
       // class form fillout
       classInputEl.textContent = "Class: Barbarian";
+      // prof form fillout
+      profInputEl.textContent = 'Proficiencies: Strength';
 
       //barbarian subclass drops
       subclassDropdown.textContent = "";
@@ -293,6 +296,8 @@ classEl.onclick = event => {
     bardBtn.onclick = () => {
       // class form
       classInputEl.textContent = "Class: Bard";
+      // prof form fillout
+      profInputEl.textContent = 'Proficiencies: Charisma';
 
       // subclass drops
       var bardSubclass = document.getElementById('subclass');
@@ -322,6 +327,8 @@ classEl.onclick = event => {
     clericBtn.onclick = () => {
       // class form
       classInputEl.textContent = "Class: Cleric";
+      // prof form fillout
+      profInputEl.textContent = 'Proficiencies: Wisdom';
 
       // subclass drops
       var clericSubclass = document.getElementById('subclass');
@@ -354,6 +361,8 @@ classEl.onclick = event => {
     druidBtn.onclick = () => {
       // class form
       classInputEl.textContent = "Class: Druid";
+      // prof form fillout
+      profInputEl.textContent = 'Proficiencies: Wisdom';
 
       // subclass drops
       var druidSubclass = document.getElementById('subclass');
@@ -383,6 +392,8 @@ classEl.onclick = event => {
     fighterBtn.onclick = () => {
       // class form
       classInputEl.textContent = "Class: Fighter";
+      // prof form fillout
+      profInputEl.textContent = 'Proficiencies: Strength & Dexterity';
 
       // subclass drops
       var fighterSubclass = document.getElementById('subclass');
@@ -413,6 +424,8 @@ classEl.onclick = event => {
     monkBtn.onclick = () => {
       // class form
       classInputEl.textContent = "Class: Monk";
+      // prof form fillout
+      profInputEl.textContent = 'Proficiencies: Dexterity & Wisdom';
 
       // subclass drops
       var monkSubclass = document.getElementById('subclass');
@@ -443,6 +456,8 @@ classEl.onclick = event => {
     paladinBtn.onclick = () => {
       // class form
       classInputEl.textContent = "Class: Paladin";
+      // prof form fillout
+      profInputEl.textContent = 'Proficiencies: Strength & Charisma';
 
       // subclass drops
       var paladinSubclass = document.getElementById('subclass');
@@ -473,6 +488,8 @@ classEl.onclick = event => {
     rangerBtn.onclick = () => {
       // class form
       classInputEl.textContent = "Class: Ranger";
+      // prof form fillout
+      profInputEl.textContent = 'Proficiencies: Dexterity & Wisdom';
 
       // subclass drops
       var rangerSubclass = document.getElementById('subclass');
@@ -502,6 +519,8 @@ classEl.onclick = event => {
     rogueBtn.onclick = () => {
       // class form
       classInputEl.textContent = "Class: Rogue";
+      // prof form fillout
+      profInputEl.textContent = 'Proficiencies: Dexterity';
 
       // subclass drops
       var rogueSubclass = document.getElementById('subclass');
@@ -532,6 +551,8 @@ classEl.onclick = event => {
     sorcererBtn.onclick = () => {
       // class form
       classInputEl.textContent = "Class: Sorcerer";
+      // prof form fillout
+      profInputEl.textContent = 'Proficiencies: Charisma';
 
       // subclass drops
       var sorcererSubclass = document.getElementById('subclass');
@@ -712,19 +733,38 @@ createBtn.onclick = (event) => {
   var playerToolsEl = document.getElementById('tools-input').textContent.split(': ');
   var playerTools = playerToolsEl[1];
   console.log(playerTools);
+
+  // sidebar button
+  var sidebarEl = document.querySelector('.saved-chara');
+  var newBtn = document.createElement('button');
+  newBtn.setAttribute('class', 'newchara');
+  newBtn.textContent = playerName;
+  sidebarEl.append(newBtn);
 };
 
-function renderPost (results) {
-  const templateStr = fs.readFileSync('../../models').toString('utf8')
-  const template = Handlebars.compile(templateStr, { noEscape: true })
-  const view = Object.assign({
-   date: new Date().toISOString(),
-   versionSlug: slugify(results.version)
-  }, results)
- 
-  return Object.assign({
-   content: template(view)
-  }, results)
- }
+// // gets data
+// var getClass = function() {
+//   // open weather api
+//   var apiURL = "https://www.dnd5eapi.co/api/classes";
 
- renderPost();
+//   fetch(apiURL).then(function(response) {
+//       response.json().then(function(data){
+//           console.log(data);
+//           displayClass(data);
+//           // displayRace(data);
+//       });
+//   })
+// };
+
+// // displays data
+// var displayClass = function(data) {
+//   classDropdown.textContent = '';
+//   let i = [0];
+//   while (i <= 6) {
+//     var classes = document.createElement('a');
+//     classes.textContent = data.results[i].name;
+//      classDropdown.appendChild(classes);
+//     i++
+//   }
+// }
+

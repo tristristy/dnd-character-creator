@@ -4,7 +4,7 @@ const { Player } = require('../../models');
 // get player data
 router.get('/', async (req, res) => {
     Player.findAll({
-        attributes: ['id', 'username', 'level', 'class_id', 'race_id', 'user_id'], 
+        attributes: ['id', 'username', 'user_id'], 
         include: [
             {
               model: Player,
