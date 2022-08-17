@@ -22,11 +22,11 @@ Player.hasOne(Race, {
 
 Player.hasOne(Class, {
   foreignKey: "class_id"
-})
+});
 
 Class.hasMany(Spell, {
   foreignKey: "class_id"
-})
+});
 
 Background.hasMany(Language, {
   foreignKey: "background_lang"

@@ -21,7 +21,15 @@ Class.init({
   features: {
     type: DataTypes.STRING,
     allowNull: false,
+  },
+  },
+  {
+    sequelize,
+    timestamps: false,
+    freezeTableName: true,
+    underscored: true,
+    modelName: 'user',
   }
-});
+);
 
-model.exports = Class;
+module.exports = Class;
