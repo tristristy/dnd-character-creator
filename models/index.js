@@ -3,9 +3,10 @@ const Spell = require('./Spell');
 const Player = require('./Player');
 const Background = require('./Background');
 const SkillProf = require('./SkillProf');
+const Race = require('./Tools');
 const Class = require('./Class');
 const Language = require('./Language');
-const Tool = require('./Tool')
+const Tool = require('./Tools')
 
 User.hasMany(Player, {
   foreignKey: 'user_id'
@@ -44,4 +45,4 @@ Race.hasMany(Language, {
 })
 
 
-module.exports = { User, Player, Race, Language, Tool, Spell, Class, Background};
+module.exports = { User, Player, Race, Language, Tool, Class, Spell, Background};
