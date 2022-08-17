@@ -741,7 +741,7 @@ createBtn.onclick = (event) => {
   newBtn.textContent = playerName;
   sidebarEl.append(newBtn);
 
-  handleCharacterFormSubmit(event);
+  // handleCharacterFormSubmit(event);
 };
 
 const $playerForm = document.querySelector('.charaform');

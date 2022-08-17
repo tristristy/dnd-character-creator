@@ -2,7 +2,7 @@ const router = require('express').Router();
 const { Player } = require('../../models');
 
 // get player data
-router.get('/', async (req, res) => {
+router.get('/player/', async (req, res) => {
     Player.findAll({
         attributes: ['id', 'user_name', 'user_id'], 
         include: [
@@ -20,7 +20,7 @@ router.get('/', async (req, res) => {
 });
 
 // get single player
-router.get('/:id', async (req, res) => {
+router.get('/player/:id', async (req, res) => {
     Player.findOne({
       where: {
         id: req.params.id
@@ -46,7 +46,7 @@ router.get('/:id', async (req, res) => {
 });
 
 // create player
-router.post('/', (req, res) => {
+router.post('/plaer/', (req, res) => {
     await Player.create({
       user_name: req.body.user_name,
       level: req.body.level,
@@ -64,7 +64,7 @@ router.post('/', (req, res) => {
 // put
 
 // delete
-router.delete('/:id', (req, res) => {
+router.delete('/player/:id', (req, res) => {
     Player.destroy({
       where: {
         id: req.params.id
