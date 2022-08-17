@@ -1,7 +1,36 @@
 const router = require('express').Router();
+const sequelize = require('../config/connection');
+const { Player } = require('../models');
+
 
 router.get('/', (req, res) => {
-  res.render('creator');
+  res.render('index');
+});
+
+router.get('/info', (req, res) => {
+  res.render('info');
+});
+
+router.get('/login', (req, res) => {
+  res.render('login');
+});
+
+router.get('/chara', (req, res) => {
+  res.render('chara');
+});
+
+router.get('/creator', (req, res) => {
+    res.render('creator', {
+      id: 1,
+      post_url: 'https://handlebarsjs.com/guide/',
+      title: 'Handlebars Docs',
+      created_at: new Date(),
+      vote_count: 10,
+      comments: [{}, {}],
+      user: {
+        username: 'test_user'
+      }
+    });
 });
 
 module.exports = router;
@@ -91,4 +120,4 @@ module.exports = router;
 //   res.render('login');
 // });
 
-// module.exports = router;
+module.exports = router;
