@@ -1,5 +1,4 @@
 const { Model, DataTypes } = require("sequelize");
-const { model } = require("../config/connection");
 const sequelize = require("../config/connection");
 
 class Class extends Model {}
@@ -22,7 +21,15 @@ Class.init({
   features: {
     type: DataTypes.STRING,
     allowNull: false,
+  },
+  },
+  {
+    sequelize,
+    timestamps: false,
+    freezeTableName: true,
+    underscored: true,
+    modelName: 'user',
   }
-});
+);
 
-model.exports = Class;
+module.exports = Class;
