@@ -1,47 +1,52 @@
 const { Model, DataTypes } = require("sequelize");
 const sequelize = require("../config/connection");
 
-class Player extends Model {}
+class Background extends Model {}
 
-Player.init (
-    {
-        id: {
-            type: DataTypes.INTEGER,
-            allowNull: false,
-            primaryKey: true,
-            autoIncrement: true,
-        },
-        user_name: {
-            type: DataTypes.STRING,
-            allowNull: false
-        },
-        level: {
-            type: DataTypes.INTEGER,
-            allowNull: false
-        },
-        class_id: {
-            type: DataTypes.INTEGER,
-            allowNull: false
-        },
-        race_id: {
-            type: DataTypes.INTEGER,
-            allowNull: false
-        },
-        user_id: {
-            type: DataTypes.INTEGER,
-            references: {
-                model: "user",
-                key: "id"
-            }
-        }
+Background.init(
+  {
+    background_id: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      primaryKey: true,
+      autoIncrement: true,
     },
-    {
+    background_name: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    background_lang: {
+      type: DataTypes.STRING,
+      allowNull: true,
+      references: {
+        model: "language",
+        key: "id",
+      },
+    },
+    background_tool: {
+      type: DataTypes.STRING,
+      allowNull: true,
+      references: {
+        model: "tool",
+        key: "id",
+      },
+    },
+    background_prof: {
+      type: DataTypes.STRING,
+      allowNull: true,
+      references: {
+        model: "skillprof",
+        key: "id",
+      },
+    },
+  },
+  {
     sequelize,
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'user',
+    modelName: "user",
   }
-)
+);
 
-module.exports = Player
+module.exports = Background
