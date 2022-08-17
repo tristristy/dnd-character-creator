@@ -47,10 +47,10 @@ Spell.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
-    gallery_id: {
+    class_id: {
       type: DataTypes.INTEGER,
       references: {
-        model: "gallery",
+        model: "class",
         key: "id",
       },
     },
@@ -63,4 +63,4 @@ Spell.init(
   }
 );
 
-module.exports = Painting;
+module.exports = Spell;
