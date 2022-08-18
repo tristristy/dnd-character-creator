@@ -745,7 +745,6 @@ deleteBtn.onclick = () => {
 // };
 
 
-
 const $playerForm = document.querySelector('.charaform');
 
 const handleCharacterFormSubmit = (event) => {
@@ -843,6 +842,7 @@ const handleCharacterFormSubmit = (event) => {
       console.log(postResponse);
       alert("Thank you for adding a character!");
     });
-};;
+};
+
 
 createBtn.addEventListener("click", handleCharacterFormSubmit)

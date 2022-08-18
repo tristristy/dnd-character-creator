@@ -1,7 +1,7 @@
 const router = require('express').Router();
 // const sequelize = require('../config/connection');
 const { Player, User } = require('../models');
-
+ 
 router.get('/', (req, res) => {res.render('index')});
 
 router.get('/info', (req, res) => {res.render('info')});
@@ -10,7 +10,9 @@ router.get('/login', (req, res) => {res.render('login')});
 
 router.get('/chara', (req, res) => {res.render('chara')});
 
-router.get("/creator", (req, res) => {res.render("creator")});
+router.get("/creator", (req, res) => {
+    return res.render('creator');
+});
 
 
 // router.get('/:id', (req, res) => {

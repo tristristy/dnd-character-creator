@@ -1,10 +1,15 @@
 const router = require('express').Router();
 const { Player } = require('../../models');
+// const { createNewPlayer } = require("../../assets/script/creatorButtons")
 
 // get player data
-router.get('/', (req, res) => {
-  Player.findAll().then((playerData) => {
-    res.json(playerData);
+router.get('/creator', (req, res) => {
+  Player.findAll({        
+    attributes: [
+    'player_id',
+    'user_name',
+  ]}).then((dbplayerData) => {
+    res.json(dbplayerData);
   })
 });
 

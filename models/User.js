@@ -36,7 +36,18 @@ User.init(
       validate: {
         len: [6],
       },
+
+
+    }/*,
+    createdAt: {
+      allowNull: false,
+      type: Sequelize.DATEONLY
     },
+    updatedAt: {
+      allowNull: false,
+      type: Sequelize.DATEONLY
+    }*/
+
   },
   {
     hooks: {
@@ -51,7 +62,7 @@ User.init(
       }
     },
     sequelize,
-    timestamps: false,
+    //timestamps: false,
     freezeTableName: true,
     underscored: true,
     modelName: 'user',

@@ -16,6 +16,12 @@ router.get('/', (req, res) => {
 // Get a single user 
 router.get('/:id', (req, res) => {
   User.findOne({
+    attributes: {exclude: ['password']},
+  })
+// get all users
+
+router.get('/:id', (req, res) => {
+  User.findOne({
     attributes: { exclude: ['password'] },
     where: {
       id: req.params.id
@@ -32,6 +38,7 @@ router.get('/:id', (req, res) => {
     console.log(err);
     res.status(500).json(err);
   });
+})
 });
 
 // CREATE new user
