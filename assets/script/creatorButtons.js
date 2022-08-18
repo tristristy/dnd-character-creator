@@ -803,7 +803,7 @@ const handleCharacterFormSubmit = (event) => {
     // playerToolsEl[1];
     console.log(playerTools);
 
-    sidebar button
+//     sidebar button
     var sidebarEl = document.querySelector('.saved-chara');
     var newBtn = document.createElement('button');
     newBtn.setAttribute('class', 'newchara');
