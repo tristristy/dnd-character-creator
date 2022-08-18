@@ -37,14 +37,6 @@ User.init(
         len: [6],
       },
     },
-    createdAt: {
-      allowNull: false,
-      type: Sequelize.DATE
-    },
-    updatedAt: {
-      allowNull: false,
-      type: Sequelize.DATE
-    }
   },
   {
     hooks: {

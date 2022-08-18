@@ -689,90 +689,160 @@ deleteBtn.onclick = () => {
 }
 
 // create button
-createBtn.onclick = (event) => {
-  event.preventDefault();
-  // player name 
-  var playerName = document.getElementById('player-name').value;
-  console.log(playerName);
+// createBtn.onclick = (event) => {
+//   event.preventDefault();
+//   // player name 
+//   var playerName = document.getElementById('player-name').value;
+//   console.log(playerName);
 
-  // player level
-  var playerLevel = document.getElementById('player-level').value;
-  console.log(playerLevel);
+//   // player level
+//   var playerLevel = document.getElementById('player-level').value;
+//   console.log(playerLevel);
 
-  // player background
-  var playerBackgroundEl = document.getElementById('bg-input').textContent.split(' ');
-  var playerBackground = playerBackgroundEl[1];
-  console.log(playerBackground);
+//   // player background
+//   var playerBackgroundEl = document.getElementById('bg-input').textContent.split(' ');
+//   var playerBackground = playerBackgroundEl[1];
+//   console.log(playerBackground);
 
-  // player race 
-  var playerRaceEl = document.getElementById('race-input').textContent.split(' ');
-  var playerRace = playerRaceEl[1];
-  console.log(playerRace);
+//   // player race 
+//   var playerRaceEl = document.getElementById('race-input').textContent.split(' ');
+//   var playerRace = playerRaceEl[1];
+//   console.log(playerRace);
 
-  // player class 
-  var playerClassEl = document.getElementById('class-input').textContent.split(' ');
-  var playerClass = playerClassEl[1];
-  console.log(playerClass);
+//   // player class 
+//   var playerClassEl = document.getElementById('class-input').textContent.split(' ');
+//   var playerClass = playerClassEl[1];
+//   console.log(playerClass);
 
-  // player subclass 
-  var playerSubclassEl = document.getElementById('subclass-input').textContent.split(': ');
-  var playerSubclass = playerSubclassEl[1];
-  console.log(playerSubclass);
+//   // player subclass 
+//   var playerSubclassEl = document.getElementById('subclass-input').textContent.split(': ');
+//   var playerSubclass = playerSubclassEl[1];
+//   console.log(playerSubclass);
 
-  // player proficiencies 
-  var playerProfEl = document.getElementById('prof-input').textContent.split(' ');
-  var playerProf = playerProfEl[1];
-  console.log(playerProf);
+//   // player proficiencies 
+//   var playerProfEl = document.getElementById('prof-input').textContent.split(' ');
+//   var playerProf = playerProfEl[1];
+//   console.log(playerProf);
 
-  // player proficiencies 
-  var playerSkillsEl = document.getElementById('skills-input').textContent.split(': ');
-  var playerSkills = playerSkillsEl[1];
-  console.log(playerSkills);
+//   // player proficiencies 
+//   var playerSkillsEl = document.getElementById('skills-input').textContent.split(': ');
+//   var playerSkills = playerSkillsEl[1];
+//   console.log(playerSkills);
 
-  // player tools
-  var playerToolsEl = document.getElementById('tools-input').textContent.split(': ');
-  var playerTools = playerToolsEl[1];
-  console.log(playerTools);
+//   // player tools
+//   var playerToolsEl = document.getElementById('tools-input').textContent.split(': ');
+//   var playerTools = playerToolsEl[1];
+//   console.log(playerTools);
 
-  // sidebar button
-  var sidebarEl = document.querySelector('.saved-chara');
-  var newBtn = document.createElement('button');
-  newBtn.setAttribute('class', 'newchara');
-  newBtn.textContent = playerName;
-  sidebarEl.append(newBtn);
+//   // sidebar button
+//   var sidebarEl = document.querySelector('.saved-chara');
+//   var newBtn = document.createElement('button');
+//   newBtn.setAttribute('class', 'newchara');
+//   newBtn.textContent = playerName;
+//   sidebarEl.append(newBtn);
 
-  // handleCharacterFormSubmit(event);
-};
+//   // handleCharacterFormSubmit(event);
+// };
+
+
 
 const $playerForm = document.querySelector('.charaform');
 
-const handleCharacterFormSubmit = event => {
+const handleCharacterFormSubmit = (event) => {
   event.preventDefault();
 
   // get player data and organize it
-  const name = $playerForm.querySelector('[name="player-name"]');
-  const level = parseInt($playerForm.querySelector('[name="player-level"]').value);
+  // const user_name = $playerForm.querySelector('[name="player-name"]');
+  // const level = $playerForm.querySelector('[name="player-level"]');
+  // const playerBackground = $playerForm.querySelector('[name="bg-input"]');
+  // const playerRace = $playerForm.querySelector('[name="race-input"]')
+  // const playerClass = $playerForm.querySelector('[name="class-input"]')
+  // const playerSubclass = $playerForm.querySelector('[name="subclass-input]"');
+  // const playerProf = $playerForm.querySelector('[name="prof-input"]');
+  // const playerSkill = $playerForm.querySelector('[name="skills-input"]');
+  // const playerTools = $playerForm.querySelector('[name="tools-input]');
+  var playerName = document.getElementById("player-name").value;
+    console.log(playerName);
+
+  //   // player level
+    var playerLevel = document.getElementById('player-level').value;
+    console.log(playerLevel);
+
+    // player background
+    var playerBackgroundEl = document.getElementById('bg-input').textContent.split(' ');
+    var playerBackground = playerBackgroundEl[1];
+    console.log(playerBackground);
+
+    // player race
+    var playerRaceEl = document.getElementById('race-input').textContent.split(' ');
+    var playerRace = playerRaceEl[1];
+    console.log(playerRace);
+
+    // player class
+    var playerClassEl = document.getElementById('class-input').textContent.split(' ');
+    var playerClass = playerClassEl[1];
+    console.log(playerClass);
+
+    // player subclass
+    var playerSubclassEl = document.getElementById('subclass-input').textContent.split(': ');
+    var playerSubclass = playerSubclassEl[1];
+    console.log(playerSubclass);
+
+    // player proficiencies
+    var playerProfEl = document.getElementById('prof-input').textContent.split(' ');
+    var playerProf = playerProfEl[1];
+    console.log(playerProf);
+
+    // player proficiencies
+    var playerSkillsEl = document.getElementById('skills-input').textContent.split(': ');
+    var playerSkills = playerSkillsEl[1];
+    console.log(playerSkills);
+
+    // player tools
+    var playerToolsEl = document.getElementById('tools-input').textContent.split(': ');
+    var playerTools = "Artisan's Tools"
+    // playerToolsEl[1];
+    console.log(playerTools);
+
+    // sidebar button
+    // var sidebarEl = document.querySelector('.saved-chara');
+    // var newBtn = document.createElement('button');
+    // newBtn.setAttribute('class', 'newchara');
+    // newBtn.textContent = playerName;
+    // sidebarEl.append(newBtn);
+
   // const favoriteAnimal = $zookeeperForm.querySelector('[name="favorite-animal"]').value;
 
-  const playerObj = { name, level };
-  console.log(zookeeperObj);
-  fetch('api/players', {
-    method: 'POST',
+  const playerObj = {
+    playerName,
+    playerLevel,
+    playerBackground,
+    playerRace,
+    playerClass,
+    playerSubclass,
+    playerProf,
+    playerSkills,
+    playerTools,
+  };
+  console.log(playerObj);
+  fetch("api/players/player", {
+    method: "POST",
     headers: {
-      Accept: 'application/json',
-      'Content-Type': 'application/json'
+      // Accept: "application/json",
+      "Content-Type": "application/json",
     },
-    body: JSON.stringify(playerObj)
+    body: JSON.stringify(playerObj),
   })
-    .then(response => {
+    .then((response) => {
       if (response.ok) {
         return response.json();
       }
-      alert('Error: ' + response.statusText);
+      alert("Error: " + response.statusText);
     })
-    .then(postResponse => {
+    .then((postResponse) => {
       console.log(postResponse);
-      alert('Thank you for adding a character!');
+      alert("Thank you for adding a character!");
     });
-};
+};;
 
+createBtn.addEventListener("click", handleCharacterFormSubmit)
