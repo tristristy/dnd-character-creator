@@ -740,39 +740,6 @@ createBtn.onclick = (event) => {
   newBtn.setAttribute('class', 'newchara');
   newBtn.textContent = playerName;
   sidebarEl.append(newBtn);
-
-  // handleCharacterFormSubmit(event);
 };
 
-const $playerForm = document.querySelector('.charaform');
-
-const handleCharacterFormSubmit = event => {
-  event.preventDefault();
-
-  // get player data and organize it
-  const name = $playerForm.querySelector('[name="player-name"]');
-  const level = parseInt($playerForm.querySelector('[name="player-level"]').value);
-  // const favoriteAnimal = $zookeeperForm.querySelector('[name="favorite-animal"]').value;
-
-  const playerObj = { name, level };
-  console.log(zookeeperObj);
-  fetch('api/players', {
-    method: 'POST',
-    headers: {
-      Accept: 'application/json',
-      'Content-Type': 'application/json'
-    },
-    body: JSON.stringify(playerObj)
-  })
-    .then(response => {
-      if (response.ok) {
-        return response.json();
-      }
-      alert('Error: ' + response.statusText);
-    })
-    .then(postResponse => {
-      console.log(postResponse);
-      alert('Thank you for adding a character!');
-    });
-};
 
