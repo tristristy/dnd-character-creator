@@ -32,9 +32,7 @@
             <section class="sidebar">
                 <div>
                     <h3 class="title saved-chara">Saved Characters</h3>
-                    {{#if user_name}}
-                    <button class="newchara"></button>
-                    {{/if}}
+                    <button class="newchara">{{ dbPlayerData.user_name }}</button>
                 </div>
             </section>
             <section id="boxes">

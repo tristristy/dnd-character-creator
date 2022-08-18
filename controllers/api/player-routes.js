@@ -3,14 +3,18 @@ const { Player } = require('../../models');
 // const { createNewPlayer } = require("../../assets/script/creatorButtons")
 
 // get player data
-router.get('/', (req, res) => {
-  Player.findAll().then((playerData) => {
-    res.json(playerData);
+router.get('/creator', (req, res) => {
+  Player.findAll({        
+    attributes: [
+    'player_id',
+    'user_name',
+  ]}).then((dbplayerData) => {
+    res.json(dbplayerData);
   })
 });
 
 // get single player
-router.get('/:player_id', async (req, res) => {
+router.get('/creator/:player_id', async (req, res) => {
     Player.findOne({
       where: {
         player_id: req.params.player_id
@@ -25,7 +29,7 @@ router.get('/:player_id', async (req, res) => {
 });
 
 // create player
-router.post('/', (req, res) => {
+router.post('creator/', (req, res) => {
     Player.create({
       user_name: req.body.user_name,
       level: req.body.level,
@@ -42,8 +46,25 @@ router.post('/', (req, res) => {
       });
 });
 
+// update player
+router.put('/creator/:id', (req, res) => {
+  Player.update(req.body, {
+    individualHooks: true,
+    where: {
+      player_id: req.params.id
+    }
+  })
+    .then(dbUserData => {
+      res.json(dbUserData);
+    })
+    .catch(err => {
+      console.log(err);
+      res.status(500).json(err);
+    });
+});
+
 // delete
-router.delete('/:player_id', (req, res) => {
+router.delete('creator/:player_id', (req, res) => {
     Player.destroy({
       where: {
         player_id: req.params.player_id
