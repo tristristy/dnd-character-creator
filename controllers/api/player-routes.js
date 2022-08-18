@@ -13,13 +13,44 @@ router.get('/creator', (req, res) => {
   })
 });
 
+// GET all galleries for homepage
+router.get('/', async (req, res) => {
+  try {
+    const dbPlayerData = await Player.findAll({
+      include: [
+        {
+          attributes: ['user_name', 'level']
+        },
+      ],
+    });
+
+    const players = dbPlayerData.map((player) =>
+      player.get({ plain: true })
+    );
+  } catch (err) {
+    console.log(err);
+    res.status(500).json(err);
+  }
+});
+
 // get single player
-router.get('/creator/:player_id', async (req, res) => {
+router.get('/player/:id', async (req, res) => {
     Player.findOne({
       where: {
-        player_id: req.params.player_id
-      }
+        id: req.params.id
+      },
+      attributes: ['id', 'user_name', 'level', 'background', 'race_id', 'class_id', 'subclass', 'playerProf', 'playerSkill', 'playerTools', 'user_id'],
+      include: [
+        {
+          model: Player,
+          attributes: ['user_name']
+        }
+      ]
     }).then(dbPlayerData => {
+        if (!dbPlayerData) {
+          res.status(404).json({ message: 'No player found with this id' });
+          return;
+        }
         res.json(dbPlayerData);
       })
       .catch(err => {
@@ -29,48 +60,48 @@ router.get('/creator/:player_id', async (req, res) => {
 });
 
 // create player
-router.post('creator/', (req, res) => {
+router.post('/player', (req, res) => {
+    console.log(req.body)
     Player.create({
-      user_name: req.body.user_name,
-      level: req.body.level,
-      class_id: req.body.class_id,
-      race_id: req.body.race_id,
-      user_id: req.body.user_id,
+      user_name: req.body.playerName,
+      level: req.body.playerLevel,
+      class_id: req.body.playerClass,
+      race_id: req.body.playerRace,
+      // user_id: req.body.user_id,
+      background: req.body.playerBackground,
+      subclass: req.body.playerSubclass,
+      tools: req.body.playerTools,
+      prof: req.body.playerProf,
+      skills: req.body.playerSkills
+
+
     })
-      .then(dbPlayerData => {
-        res.json(dbPlayerData)
-      })
+      .then(dbPlayerData => 
+        {
+          console.log(dbPlayerData);
+          res.json(dbPlayerData)
+        }
+        )
       .catch(err => {
         console.log(err);
         res.status(500).json(err);
       });
 });
 
-// update player
-router.put('/creator/:id', (req, res) => {
-  Player.update(req.body, {
-    individualHooks: true,
-    where: {
-      player_id: req.params.id
-    }
-  })
-    .then(dbUserData => {
-      res.json(dbUserData);
-    })
-    .catch(err => {
-      console.log(err);
-      res.status(500).json(err);
-    });
-});
+// put
 
 // delete
-router.delete('creator/:player_id', (req, res) => {
+router.delete('/player/:id', (req, res) => {
     Player.destroy({
       where: {
-        player_id: req.params.player_id
+        id: req.params.id
       }
     })
       .then(dbPlayerData => {
+        if (!dbPlayerData) {
+          res.status(404).json({ message: 'No player found with this id' });
+          return;
+        }
         res.json(dbPlayerData);
       })
       .catch(err => {

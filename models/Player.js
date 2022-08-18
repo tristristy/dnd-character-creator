@@ -21,11 +21,31 @@ Player.init (
         },
         class_id: {
             type: DataTypes.STRING,
-            allowNull: false
+            allowNull: true
         },
         race_id: {
             type: DataTypes.STRING,
-            allowNull: false
+            allowNull: true
+        },
+        background: {
+            type: DataTypes.STRING,
+            allowNull: true
+        },
+        subclass: {
+            type: DataTypes.STRING,
+            allowNull: true
+        },
+        tools: {
+            type: DataTypes.STRING,
+            allowNull: true
+        },
+        prof: {
+            type: DataTypes.STRING,
+            allowNull: true
+        },
+        skills: {
+            type: DataTypes.STRING,
+            allowNull: true
         },
         user_id: {
             type: DataTypes.INTEGER,
