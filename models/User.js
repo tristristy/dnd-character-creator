@@ -36,7 +36,7 @@ User.init(
       validate: {
         len: [6],
       },
-    },
+    }/*,
     createdAt: {
       allowNull: false,
       type: Sequelize.DATE
@@ -44,7 +44,7 @@ User.init(
     updatedAt: {
       allowNull: false,
       type: Sequelize.DATE
-    }
+    }*/
   },
   {
     hooks: {
