@@ -803,12 +803,12 @@ const handleCharacterFormSubmit = (event) => {
     // playerToolsEl[1];
     console.log(playerTools);
 
-    // sidebar button
-    // var sidebarEl = document.querySelector('.saved-chara');
-    // var newBtn = document.createElement('button');
-    // newBtn.setAttribute('class', 'newchara');
-    // newBtn.textContent = playerName;
-    // sidebarEl.append(newBtn);
+    sidebar button
+    var sidebarEl = document.querySelector('.saved-chara');
+    var newBtn = document.createElement('button');
+    newBtn.setAttribute('class', 'newchara');
+    newBtn.textContent = playerName;
+    sidebarEl.append(newBtn);
 
   // const favoriteAnimal = $zookeeperForm.querySelector('[name="favorite-animal"]').value;
 
