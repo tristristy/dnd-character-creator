@@ -16,6 +16,15 @@ router.get('/', (req, res) => {
 // Get a single user 
 router.get('/:id', (req, res) => {
   User.findOne({
+<<<<<<< HEAD
+    attributes: {exclude: ['password']},
+  })
+// get all users
+
+router.get('/:id', (req, res) => {
+  User.findOne({
+=======
+>>>>>>> origin/develop
     attributes: { exclude: ['password'] },
     where: {
       id: req.params.id
@@ -32,10 +41,26 @@ router.get('/:id', (req, res) => {
     console.log(err);
     res.status(500).json(err);
   });
+<<<<<<< HEAD
+})
+    .then(dbUserData => {
+      if (!dbUserData) {
+        res.status(404).json({ message: 'No user found with this id' });
+        return;
+      }
+      res.json(dbUserData);
+    })
+    .catch(err => {
+      console.log(err);
+      res.status(500).json(err);
+    });
+  });
+=======
 });
+>>>>>>> origin/develop
 
 // CREATE new user
-router.post('/', (req, res) => {
+router.post('/', async (req, res) => {
   try {
     const dbUserData = await User.create({
       username: req.body.username,
