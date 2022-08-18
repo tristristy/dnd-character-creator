@@ -4,8 +4,8 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Player Creator</title>
-        <link rel="stylesheet" href="./assets/style/style.css"/>
-        <link rel="stylesheet" href="./assets/style/creator.css" />
+        <link rel="stylesheet" href="/style/style.css">
+        <link rel="stylesheet" href="/style/creator.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative&display=swap" rel="stylesheet">
@@ -20,25 +20,27 @@
             <h1>Character Creator</h1>
             <nav>
                 <ul>
-                    <li><a href="./index.html">Home</a></li>
-                    <li><a href="./creator.html">Creator</a></li>
-                    <li><a href="./info.html">About the Game</a></li>
-                    <li><a href="./chara.html">How To</a></li>
-                    <li><a href="./login.html">Login</a></li>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/creator">Creator</a></li>
+                    <li><a href="/info">About the Game</a></li>
+                    <li><a href="/chara">How To</a></li>
+                    <li><a href="/login">Login</a></li>
                 </ul>
             </nav>
         </header>
         <main>
             <section class="sidebar">
                 <div>
-                    <h3 class="title">Saved Characters</h3>
-                    <button class="newchara">Character Example</button>
+                    <h3 class="title saved-chara">Saved Characters</h3>
+                    {{#if user_name}}
+                    <button class="newchara">{{user_name}}</button>
+                    {{/if}}
                 </div>
             </section>
             <section id="boxes">
                 <div class="charasheet">
                     <div class="dropdown">
-                        <button class="background dropbtn">Background</button>
+                        <button class="background dropbtn">Background {{user_name}}</button>
                             <div id="backgroundDropdown" class="dropdown-content">
                                 <a id="acolyte">Acolyte</a>
                                 <a id="charlatan">Charlatan</a>
@@ -199,8 +201,7 @@
             </section>
         </main>
         <footer>&copy; 2022</footer>
-        <!-- <script src="./views/creator.handlebars"></script> -->
-        <script src="./assets/script/creatorButtons.js"></script>
-        <script src="./public/js/logout.js"></script>
+        <script src="/script/logout.js"></script>
+        <script src="/script/creatorButtons.js"></script>
     </body>
 </html>
