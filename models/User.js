@@ -39,11 +39,11 @@ User.init(
     }/*,
     createdAt: {
       allowNull: false,
-      type: Sequelize.DATE
+      type: Sequelize.DATEONLY
     },
     updatedAt: {
       allowNull: false,
-      type: Sequelize.DATE
+      type: Sequelize.DATEONLY
     }*/
   },
   {
@@ -59,7 +59,7 @@ User.init(
       }
     },
     sequelize,
-    timestamps: false,
+    //timestamps: false,
     freezeTableName: true,
     underscored: true,
     modelName: 'user',
