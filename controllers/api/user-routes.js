@@ -35,7 +35,7 @@ router.get('/:id', (req, res) => {
 });
 
 // CREATE new user
-router.post('/', (req, res) => {
+router.post('/', async (req, res) => {
   try {
     const dbUserData = await User.create({
       username: req.body.username,

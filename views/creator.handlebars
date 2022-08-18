@@ -33,14 +33,14 @@
                 <div>
                     <h3 class="title saved-chara">Saved Characters</h3>
                     {{#if user_name}}
-                    <button class="newchara">{{user_name}}</button>
+                    <button class="newchara"></button>
                     {{/if}}
                 </div>
             </section>
             <section id="boxes">
                 <div class="charasheet">
                     <div class="dropdown">
-                        <button class="background dropbtn">Background {{user_name}}</button>
+                        <button class="background dropbtn">Background</button>
                             <div id="backgroundDropdown" class="dropdown-content">
                                 <a id="acolyte">Acolyte</a>
                                 <a id="charlatan">Charlatan</a>
@@ -153,29 +153,22 @@
                                 <a id="water-vehicle">Water Vehicle</a>
                         </div>
                     </div>
-                    <div class="dropdown">
-                        <button class="spells dropbtn">Spell/Slots</button>
-                            <div id="spellsDropdown" class="dropdown-content">
-                                <a href="#">Spells are the magical effect that occurs when a character takes and manipulates the invisible strands of raw, magical energy present in the world of D&D. Each spell caster gains this ability depending on their class.Spells themselves have a specific level at which they can be casted at. These levels go from 0 - 9. A spell slot represents the amount of spells you can cast. Magic can be very physically tolling on your character. Spell slots represents those limits</a>
-                                <a href="./chara.handlebars#xspells" target="_blank">Learn More</a>
-                        </div>
-                    </div>
                  </div>
                 <form class="charaform mainform">
                     <div class="inputform">
-                        <p>Name: <input id="player-name" type="text"></p> 
+                        <p>Name: <input id="player-name" type="text" name="user_name"></p> 
                     </div> 
                     <div class="inputform">
-                        <p>Level (1-20): <input id="player-level" type="number"> </p>
+                        <p>Level (1-20): <input id="player-level" type="number" name="level"> </p>
                     </div> 
                     <div class="inputform">
                         <p id="bg-input">Background:</p>
                     </div> 
                     <div class="inputform">
-                        <p id="race-input">Race:</p>
+                        <p id="race-input" name="race_id">Race:</p>
                     </div> 
                     <div class="inputform">
-                        <p id="class-input">Class:</p>
+                        <p id="class-input" name="class_id">Class:</p>
                         <p id="subclass-input">Subclass:</p>
                     </div> 
                     <div class="inputform">
@@ -186,9 +179,6 @@
                     </div> 
                     <div class="inputform">
                         <p id="tools-input">Equipment:</p>
-                    </div> 
-                    <div class="inputform">
-                        <p>Spells:</p>
                     </div> 
                     <!-- <div class="miscInfoForm inputform">
                         <p>Misc Information: <input type="text"> </p>
