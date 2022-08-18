@@ -33,14 +33,14 @@
                 <div>
                     <h3 class="title saved-chara">Saved Characters</h3>
                     {{#if user_name}}
-                    <button class="newchara">Character Example</button>
+                    <button class="newchara">{{user_name}}</button>
                     {{/if}}
                 </div>
             </section>
             <section id="boxes">
                 <div class="charasheet">
                     <div class="dropdown">
-                        <button class="background dropbtn">Background</button>
+                        <button class="background dropbtn">Background {{user_name}}</button>
                             <div id="backgroundDropdown" class="dropdown-content">
                                 <a id="acolyte">Acolyte</a>
                                 <a id="charlatan">Charlatan</a>

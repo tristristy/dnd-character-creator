@@ -20,15 +20,15 @@ Player.init (
             allowNull: false
         },
         class_id: {
-            type: DataTypes.INTEGER,
+            type: DataTypes.STRING,
             allowNull: false
         },
         race_id: {
-            type: DataTypes.INTEGER,
+            type: DataTypes.STRING,
             allowNull: false
         },
         user_id: {
-            type: DataTypes.INTEGER,
+            type: DataTypes.STRING,
             references: {
                 model: "user",
                 key: "id"
@@ -38,9 +38,8 @@ Player.init (
     {
     sequelize,
     timestamps: false,
-    freezeTableName: true,
     underscored: true,
-    modelName: 'user',
+    modelName: 'player',
   }
 )
 

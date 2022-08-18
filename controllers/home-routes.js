@@ -1,39 +1,37 @@
 const router = require('express').Router();
-const sequelize = require('../config/connection');
-const { Player } = require('../models');
+// const sequelize = require('../config/connection');
+const { Player, User } = require('../models');
+
+router.get('/', (req, res) => {res.render('index')});
+
+router.get('/info', (req, res) => {res.render('info')});
+
+router.get('/login', (req, res) => {res.render('login')});
+
+router.get('/chara', (req, res) => {res.render('chara')});
+
+router.get("/creator", (req, res) => {res.render("creator")});
 
 
-router.get('/', (req, res) => {
-  res.render('index');
-});
-
-router.get('/info', (req, res) => {
-  res.render('info');
-});
-
-router.get('/login', (req, res) => {
-  res.render('login');
-});
-
-router.get('/chara', (req, res) => {
-  res.render('chara');
-});
-
-router.get('/creator', (req, res) => {
-    res.render('creator', {
-      id: 1,
-      post_url: 'https://handlebarsjs.com/guide/',
-      title: 'Handlebars Docs',
-      created_at: new Date(),
-      vote_count: 10,
-      comments: [{}, {}],
-      user: {
-        username: 'test_user'
-      }
-    });
-});
-
-module.exports = router;
+// router.get('/:id', (req, res) => {
+//   User.findOne({
+//     attributes: { exclude: ['password'] },
+//     where: {
+//       id: req.params.id
+//     }
+//   })
+//     .then(dbUserData => {
+//       if (!dbUserData) {
+//         res.status(404).json({ message: 'No user found with this id' });
+//         return;
+//       }
+//       res.json(dbUserData);
+//     })
+//     .catch(err => {
+//       console.log(err);
+//       res.status(500).json(err);
+//     });
+// });
 
 // const router = require('express').Router();
 // const { Gallery, Painting } = require('../models');
@@ -43,25 +41,26 @@ module.exports = router;
 // //redo routes to fit our design.
 
 // // GET all galleries for homepage
-// router.get('/', async (req, res) => {
+// router.get('/creator', async (req, res) => {
 //   try {
-//     const dbGalleryData = await Gallery.findAll({
+//     const dbPlayerData = await Player.findAll({
+//       attributes: [
+//         'id',
+//         'user_name'
+//       ],
 //       include: [
 //         {
-//           model: Painting,
-//           attributes: ['filename', 'description'],
+//           model: User,
+//           attributes: ['id'],
 //         },
 //       ],
 //     });
 
-//     const galleries = dbGalleryData.map((gallery) =>
-//       gallery.get({ plain: true })
+//     const players = dbPlayerData.map((player) =>
+//       player.get({ plain: true })
 //     );
 
-//     res.render('homepage', {
-//       galleries,
-//       loggedIn: req.session.loggedIn,
-//     });
+//     res.render('creator', {players});
 //   } catch (err) {
 //     console.log(err);
 //     res.status(500).json(err);
