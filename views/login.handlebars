@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Player Creator</title>
+        <link rel="stylesheet" href="/style/style.css">
+        <link rel="stylesheet" href="/style/login.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Fondamento&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Amita&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+        <header>
+            <h1>Character Creator</h1>
+            <nav>
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/creator">Creator</a></li>
+                    <li><a href="/info">About the Game</a></li>
+                    <li><a href="/chara">How To</a></li>
+                    <li><a href="/login">Login</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <section id="boxes">
+                <div id="login" class="logsign">
+                    <h2>Login</h2>
+                    <p>
+                        Username: <input type="text"></br>
+                        Password: <input type="password"></br>
+                        <input type="submit"></br>
+                        <a onclick="openSign()">No account? Create one!</a>
+                    </p>
+                </div>
+                <div id="signup" class="logsign">
+                    <h2>Signup</h2>
+                    <p>
+                        Email: <input type="email"></br>
+                        Username: <input type="text"></br>
+                        Password: <input type="password"></br>
+                        Confirm Password: <input type="password"></br>
+                        <input type="submit"></br>
+                        <a onclick="openLog()">Have an account? Login!</a>
+                    </p>
+                </div>                
+            </section>
+        </main>
+        <footer>&copy; 2022</footer>
+        <script src="/script/logout.js"></script>
+        <script src="/script/login.js"></script>
+        <script src="/script/togglelogin.js"></script>
+    </body>
+</html>
